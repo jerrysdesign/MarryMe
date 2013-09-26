@@ -100,11 +100,11 @@ $ninesixty-columns: 24;
       }
     }
     &.left {
-      margin-left: 80px;
+      margin-left: 60px;
       float: left;
     }
     &.right {
-      margin-right: 60px;
+      margin-right: 30px;
       float: right;
     }
   }
@@ -294,4 +294,35 @@ ul.menu-stacked {
   background-color: #f0f0f0;
   text-align: center;
   color: #a4a4a4;
+}
+
+/*breadcrumb*/
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  border-radius: 4px;
+  > li {
+    display: inline-block;
+    > a {
+      color: #909090;
+      font-size: 12px;
+    }
+    &.active {
+      a {
+        color: #000;
+      }
+    }
+  }
+  li + li:before {
+    padding: 0 6px;
+    color: #cccccc;
+    content: url(../images/breadcrumb.png);
+  }
+  > li:first-child {
+    &:before {
+      content: "您的位置：";
+      padding-right: 5px;
+    }
+  }
 }
