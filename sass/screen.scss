@@ -2,16 +2,6 @@
 @import "compass/css3";
 @import "variables";
 
-body {
-  background-color: $bodyBgColor;
-  color:            $bodyFontColor;
-  font-family:      $bodyFontFamily;
-  font-size:        $baseFontSize;
-  line-height:      $baseLineHeight;
-}
-a {
-  text-decoration: none;
-}
 @import "960/grid";
 .container_12 {
   @include grid-system(12);
@@ -29,6 +19,49 @@ $ninesixty-columns: 24;
   .main-content {
     @include grid(18);
   }
+}
+
+body {
+  background-color: $bodyBgColor;
+  color:            $bodyFontColor;
+  font-family:      $bodyFontFamily;
+  font-size:        $baseFontSize;
+  line-height:      $baseLineHeight;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+h1,
+.h1 {
+  font-size: 36px;
+}
+
+h2,
+.h2 {
+  font-size: 30px;
+}
+
+h3,
+.h3 {
+  font-size: 24px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
 }
 
 .wrapper {
@@ -52,6 +85,9 @@ $ninesixty-columns: 24;
   @include clearfix;
   padding: 20px;
   background-color: #f0f0f0;
+  > .container_12 {
+    margin-left: -10px;
+  }
 }
 .footer {
   @include clearfix;
@@ -324,5 +360,90 @@ ul.menu-stacked {
       content: "您的位置：";
       padding-right: 5px;
     }
+  }
+}
+
+/*.sub*/
+.stylist-profile {
+  @include box-shadow (0 3px 3px rgba(0,0,0,.3));
+  border-top: 5px solid $PrimaryColor;
+  background-color: #fff;
+  padding: 10px;
+}
+.activity {
+  dl {}
+  dt , dd {
+    color: $PrimaryColor;
+    display: block;
+    padding: 2px;
+  }
+  dt {
+    float: left;
+    width: 4em;
+    padding-left: 24px;
+  }
+  dd {
+    margin-left: 5em;
+  }
+  .trending { @include bg('trending-icon.png');}
+  .favorite { @include bg('favorite-icon.png');}
+  .share    { @include bg('share-icon.png');}
+  .trending , .favorite , .share {
+    background-position: 0 center;
+    background-repeat: no-repeat;
+  }
+}
+.back-btn {
+  background-color: $PrimaryColor;
+  color: #fff;
+  display: block;
+  line-height: 37px;
+  border-bottom: 3px solid #e5e5e5;
+  padding-left: 48px;
+  @include bg('back-btn.png');
+  background-repeat: no-repeat;
+  background-position: 24px center;
+}
+
+.photo-list-container {
+  background-color: #fff;
+  @include box-shadow(-1px 2px 5px rgba(0,0,0,.22));
+  padding: 10px 13px 10px 12px;
+  color: #909090;
+  position: relative;
+  h3 {
+    margin: 10px 0;
+    color: #000;
+    font-weight: bold;
+    margin-right: 80px;//字數太多會撞到彩帶
+  }
+}
+.ribbon {
+  @include bg('ribbon.png');
+  width: 38px;
+  height: 51px;
+  position: absolute;
+  top: -12px;
+  &.favorite {
+    right: 13px;
+  }
+  &.share {
+    right: 55px;
+  }
+}
+.photo-list > li {
+  display: inline-block;
+  padding: 10px;
+  width: 205px;
+  vertical-align: top;
+  a {
+    display: block;
+  }
+  p {
+    //@include word-break(break-all);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 200px;
+    height: 1.5em;
   }
 }
