@@ -1,0 +1,116 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title Marry Me
+    /! Stylesheet
+    link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"
+    /! IE Conditional comment
+    /[if lt IE 9]
+      script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
+  body
+    .wrapper
+      .header
+        .logo-mask
+          .logo-circle
+        .navbar
+          ul.nav.left
+            li.active
+              a href="javascript:;"
+                span 結婚這檔事
+            li
+              a href="javascript:;"
+                span 給我造型師
+            li
+              a href="javascript:;"
+                span 給我婚攝/影
+          ul.nav.right
+            li
+              a href="javascript:;"
+                span 活動專區
+            li
+              a href="javascript:;"
+                span 加入Marry Me
+            li
+              a href="javascript:;"
+                span 關於Marry Me
+        .logo-mask
+          .logo-circle-inner
+            .logo
+      .banner
+        .page-heaer
+          img src='images/page-title.png' alt=''
+          / h1
+          /   | 結婚這檔事
+          /   span about marry
+
+        .login
+          a href='javasript:;' 登入
+          |   
+          | / 
+          |  
+          a href='javasript:;' 註冊
+
+        .search-bar
+          ul
+            li
+              .select
+                | 地區
+            li
+              .select
+                | 類別
+            li
+              .select
+                | 日期
+            li
+              .search-box
+                input.input-text type="text"
+                button.search-btn type="submit" 搜尋
+      .main
+        .container_12
+          .two-column 
+            .sub
+              p 123
+            .main-content
+              p 123
+      .footer
+        .container_12
+          .grid_3
+            .section
+              h3 About
+              ul.menu-stacked
+                li.active
+                  a href="javascript:;" 
+                    =zh_lorem_words 10
+                -4.times do
+                  li
+                    a href="javascript:;" 
+                      =zh_lorem_words 10
+            .section
+              h3 Contact
+              a.coontact-icon href='mailto:saymarryme@gmail.com' saymarryme@gmail.com
+          .grid_6
+            .section
+              h3 Latest News
+              ul.menu-stacked
+                li.active
+                  a href="javascript:;" 
+                    =zh_lorem_words 10
+                -6.times do
+                  li
+                    a href="javascript:;" 
+                      =zh_lorem_words 10
+            .section
+              h3 Subscribe
+              a href="javascript:;"
+                img src='images/subscribe-icon.png'
+          .grid_3
+            .section
+              h3 Marry Me Facebook
+              /! imitation
+              img src='images/assets/fb_plugin.png'
+              == render :partial => "partials/fb_plugin"
+        .copyright
+          | Copyright © 2013 Marry-Me Inc.
+
+      == render :partial => "partials/fb_plugin_sdk"

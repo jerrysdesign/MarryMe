@@ -1,0 +1,40 @@
+// Variables
+
+// these to control global styles
+$bodyBgColor:    #fff;
+$bodyFontColor:  #444;
+$bodyFontFamily: Arial, 微軟正黑體, 'Microsoft JhengHei', 新細明體, 'Microsoft YaHei', 'Lucida Grande', 'Lucida Sans Unicode', sans-serif;
+$baseFontSize:   13px;
+$baseLineHeight: 1.8;
+
+//Stylesheet Path
+$image-dir:'../images/';
+
+@mixin bg($filename) {
+  background-image: url(#{$image-dir}#{$filename});
+}
+
+//color
+$PrimaryColor:  #86e4c0;
+$PrimaryColor2: #5e9f86;
+
+@mixin clearfix {
+  &:before, &:after {
+    content: ""; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+     clear: both;
+  }
+}
+@mixin circle {
+  @include border-radius (999px);
+}
+@mixin hide-text {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  //display: block;
+}
