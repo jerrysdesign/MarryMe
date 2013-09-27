@@ -277,7 +277,7 @@ body {
   background-color: white;
   color: #444444;
   font-family: Arial, 微軟正黑體, "Microsoft JhengHei", 新細明體, "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", sans-serif;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.8;
 }
 
@@ -357,6 +357,7 @@ h6,
 }
 
 .footer {
+  font-size: 13px;
   padding: 20px;
   background-color: #fff;
 }
@@ -712,28 +713,24 @@ ul.menu-stacked > li.active {
   padding-right: 5px;
 }
 
-/*.sub*/
-.stylist-profile {
-  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  border-top: 5px solid #86e4c0;
-  background-color: #fff;
-  padding: 10px;
+.activity {
+  clear: both;
+  margin-bottom: 10px;
 }
-
+.activity:before, .activity:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.activity:after {
+  clear: both;
+}
 .activity dt, .activity dd {
   color: #86e4c0;
   display: block;
   padding: 2px;
-}
-.activity dt {
-  float: left;
-  width: 4em;
-  padding-left: 24px;
-}
-.activity dd {
-  margin-left: 5em;
+  min-height: 23px;
 }
 .activity .trending {
   background-image: url(../images/icon/trending-icon-p.png);
@@ -750,6 +747,35 @@ ul.menu-stacked > li.active {
   background-position: 0 center;
   background-repeat: no-repeat;
 }
+.activity .hart {
+  background-image: url(../images/icon/share-icon-p.png);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+}
+
+/*.sub*/
+.stylist-profile {
+  -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  border-top: 5px solid #86e4c0;
+  background-color: #fff;
+  padding: 10px;
+}
+.stylist-profile p {
+  margin-bottom: 20px;
+}
+
+.activity.stacked dt {
+  width: 4em;
+  padding-left: 24px;
+  float: left;
+}
+.activity.stacked dd {
+  width: auto;
+  padding-left: inherit;
+  margin-left: 5em;
+}
 
 .back-btn {
   background-color: #86e4c0;
@@ -758,6 +784,7 @@ ul.menu-stacked > li.active {
   line-height: 37px;
   border-bottom: 3px solid #e5e5e5;
   padding-left: 48px;
+  margin: 20px 0;
   background-image: url(../images/back-btn.png);
   background-repeat: no-repeat;
   background-position: 24px center;
@@ -785,12 +812,41 @@ ul.menu-stacked > li.active {
   height: 51px;
   position: absolute;
   top: -12px;
+  cursor: pointer;
 }
 .ribbon.favorite {
   right: 13px;
 }
+.ribbon.favorite .icon {
+  background-image: url(../images/icon/favorite-icon-w.png);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+  margin-top: 14px;
+}
 .ribbon.share {
   right: 55px;
+}
+.ribbon.share .icon {
+  background-image: url(../images/icon/share-icon-w.png);
+  background-position: 0 center;
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  margin-left: 12px;
+  margin-top: 14px;
+}
+
+.activity.inline dt, .activity.inline dd {
+  float: left;
+}
+.activity.inline dt {
+  width: 1.5em;
+}
+.activity.inline dd {
+  width: 3em;
 }
 
 .photo-list > li {

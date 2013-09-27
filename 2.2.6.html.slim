@@ -84,7 +84,7 @@ html
                 h5 =zh_lorem_name
                 hr
                 p =zh_lorem_paragraph
-                dl.activity
+                dl.activity.stacked
                   dt.trending 人氣:
                   dd 999
                   dt.favorite 收藏數:
@@ -96,9 +96,17 @@ html
             .main-content
               .photo-list-container
                 .ribbon.favorite
+                  .icon
                 .ribbon.share
+                  .icon
                 h3 =zh_lorem_sentence
-                div
+                dl.activity.inline
+                  dt.trending
+                  dd 999
+                  dt.favorite
+                  dd 999
+                  dt.share
+                  dd 999
                 p =zh_lorem_paragraph
                 ul.photo-list
                   -12.times do

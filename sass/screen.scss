@@ -90,6 +90,7 @@ h6,
   }
 }
 .footer {
+  font-size: 13px;
   @include clearfix;
   padding: 20px;
   background-color: #fff;
@@ -362,6 +363,21 @@ ul.menu-stacked {
     }
   }
 }
+.activity {
+  @include clearfix;
+  clear: both;
+  margin-bottom:10px; 
+  dt , dd {
+    color: $PrimaryColor;
+    display: block;
+    padding: 2px;
+    min-height: 23px;
+  }
+  .trending { @include icon('trending-icon-p.png');}
+  .favorite { @include icon('favorite-icon-p.png');}
+  .share    { @include icon('share-icon-p.png');}
+  .hart    { @include icon('share-icon-p.png');}
+}
 
 /*.sub*/
 .stylist-profile {
@@ -369,25 +385,21 @@ ul.menu-stacked {
   border-top: 5px solid $PrimaryColor;
   background-color: #fff;
   padding: 10px;
-}
-.activity {
-  dl {}
-  dt , dd {
-    color: $PrimaryColor;
-    display: block;
-    padding: 2px;
+  p {
+    margin-bottom:20px; 
   }
+}
+.activity.stacked {
   dt {
-    float: left;
     width: 4em;
     padding-left: 24px;
+    float: left;
   }
   dd {
+    width: auto;
+    padding-left: inherit;
     margin-left: 5em;
   }
-  .trending { @include icon('trending-icon-p.png');}
-  .favorite { @include icon('favorite-icon-p.png');}
-  .share    { @include icon('share-icon-p.png');}
 }
 .back-btn {
   background-color: $PrimaryColor;
@@ -396,11 +408,11 @@ ul.menu-stacked {
   line-height: 37px;
   border-bottom: 3px solid #e5e5e5;
   padding-left: 48px;
+  margin: 20px 0;
   @include bg('back-btn.png');
   background-repeat: no-repeat;
   background-position: 24px center;
 }
-
 .photo-list-container {
   background-color: #fff;
   @include box-shadow(-1px 2px 5px rgba(0,0,0,.22));
@@ -420,11 +432,35 @@ ul.menu-stacked {
   height: 51px;
   position: absolute;
   top: -12px;
+  cursor: pointer;
   &.favorite {
     right: 13px;
+    .icon {
+      @include icon('favorite-icon-w.png');
+      @include wh(16,16);
+      margin-left: 12px;
+      margin-top: 14px;
+    }
   }
   &.share {
     right: 55px;
+    .icon {
+      @include icon('share-icon-w.png');
+      @include wh(16,16);
+      margin-left: 12px;
+      margin-top: 14px;
+    }
+  }
+}
+.activity.inline {
+  dt , dd {
+    float: left;
+  }
+  dt {
+    width: 1.5em;
+  }
+  dd {
+    width: 3em;
   }
 }
 .photo-list > li {
