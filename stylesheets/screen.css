@@ -736,15 +736,17 @@ ul.menu-stacked > li.active {
   margin-left: 5em;
 }
 .activity .trending {
-  background-image: url(../images/trending-icon.png);
+  background-image: url(../images/icon/trending-icon-p.png);
+  background-position: 0 center;
+  background-repeat: no-repeat;
 }
 .activity .favorite {
-  background-image: url(../images/favorite-icon.png);
+  background-image: url(../images/icon/favorite-icon-p.png);
+  background-position: 0 center;
+  background-repeat: no-repeat;
 }
 .activity .share {
-  background-image: url(../images/share-icon.png);
-}
-.activity .trending, .activity .favorite, .activity .share {
+  background-image: url(../images/icon/share-icon-p.png);
   background-position: 0 center;
   background-repeat: no-repeat;
 }

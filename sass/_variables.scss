@@ -9,9 +9,14 @@ $baseLineHeight: 1.8;
 
 //Stylesheet Path
 $image-dir:'../images/';
-
+$image-dir-icon:'../images/icon/';
 @mixin bg($filename) {
   background-image: url(#{$image-dir}#{$filename});
+}
+@mixin icon($filename) {
+  background-image: url(#{$image-dir-icon}#{$filename});
+  background-position: 0 center;
+  background-repeat: no-repeat;
 }
 
 //color

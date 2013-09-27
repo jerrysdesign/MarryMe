@@ -385,13 +385,9 @@ ul.menu-stacked {
   dd {
     margin-left: 5em;
   }
-  .trending { @include bg('trending-icon.png');}
-  .favorite { @include bg('favorite-icon.png');}
-  .share    { @include bg('share-icon.png');}
-  .trending , .favorite , .share {
-    background-position: 0 center;
-    background-repeat: no-repeat;
-  }
+  .trending { @include icon('trending-icon-p.png');}
+  .favorite { @include icon('favorite-icon-p.png');}
+  .share    { @include icon('share-icon-p.png');}
 }
 .back-btn {
   background-color: $PrimaryColor;
