@@ -15,6 +15,7 @@ html
           .logo-circle
         .navbar
           ul.nav.left
+            //ative時 li:class => "active"
             li.active
               a href="javascript:;"
                 span 結婚這檔事
@@ -43,25 +44,32 @@ html
           / h1
           /   | 結婚這檔事
           /   span about marry
-
         .login
           a href='javasript:;' 登入
           |   
           | / 
           |  
           a href='javasript:;' 註冊
-
         .search-bar
           ul
             li
-              .select
-                | 地區
+              ul#S1.menu-select
+                - (1..3).each do |i|
+                  li
+                    a href='javascript:;' Item #{i}
+                //active first
             li
-              .select
-                | 類別
+              ul#S2.menu-select
+                - (1..3).each do |i|
+                  li
+                    a href='javascript:;' Item #{i}
+                //active first
             li
-              .select
-                | 日期
+              ul#S3.menu-select
+                - (1..3).each do |i|
+                  li
+                    a href='javascript:;' Item #{i}
+                //active first
             li
               .search-box
                 input.input-text type="text"
@@ -114,7 +122,6 @@ html
                       a href="javascript:;"
                         == image_tag lorem_image("205x205"), :class => "photo"
                       p =zh_lorem_sentence
-
       .footer
         .container_12
           .grid_3
@@ -156,3 +163,12 @@ html
           | Copyright © 2013 Marry-Me Inc.
 
       == render :partial => "partials/fb_plugin_sdk"
+    
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"
+    script src="js/dropdown.js"
+    javascript:
+      $(function () {
+        $('#S1').selectMenu();
+        $('#S2').selectMenu();
+        $('#S3').selectMenu();
+      });
