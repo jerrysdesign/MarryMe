@@ -117,46 +117,8 @@ html
                       a href="javascript:;"
                         == image_tag lorem_image("205x205"), :class => "photo"
                       p =zh_lorem_sentence
-      .footer
-        .container_12
-          .grid_3
-            .section
-              h3 About
-              ul.menu-stacked
-                li.active
-                  a href="javascript:;" 
-                    =zh_lorem_words 10
-                -4.times do
-                  li
-                    a href="javascript:;" 
-                      =zh_lorem_words 10
-            .section
-              h3 Contact
-              a.coontact-icon href='mailto:saymarryme@gmail.com' saymarryme@gmail.com
-          .grid_6
-            .section
-              h3 Latest News
-              ul.menu-stacked
-                li.active
-                  a href="javascript:;" 
-                    =zh_lorem_words 10
-                -6.times do
-                  li
-                    a href="javascript:;" 
-                      =zh_lorem_words 10
-            .section
-              h3 Subscribe
-              a href="javascript:;"
-                img src='images/subscribe-icon.png'
-          .grid_3
-            .section
-              h3 Marry Me Facebook
-              /! imitation
-              img src='images/assets/fb_plugin.png'
-              == render :partial => "partials/fb_plugin"
-        .copyright
-          | Copyright © 2013 Marry-Me Inc.
-
+      
+      == render :partial => "partials/footer"
       == render :partial => "partials/fb_plugin_sdk"
       script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
       script src="js/libs/jquery.fancydropdown.js"
