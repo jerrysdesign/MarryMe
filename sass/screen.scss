@@ -2,6 +2,7 @@
 @import "compass/css3";
 @import "variables";
 
+// Grid system
 @import "960/grid";
 .container_12 {
   @include grid-system(12);
@@ -21,6 +22,7 @@ $ninesixty-columns: 24;
   }
 }
 
+// Reset
 body {
   background-color: $bodyBgColor;
   color:            $bodyFontColor;
@@ -63,7 +65,14 @@ h6,
 .h6 {
   font-size: 12px;
 }
-
+// 全域共用 排版樣式
+.fl {
+  float: left !important;
+}
+.fr {
+  float: right !important;
+}
+// 板面
 .wrapper {
   margin: 0 auto;
   width: 980px;
@@ -87,6 +96,16 @@ h6,
   background-color: #f0f0f0;
   > .container_12 {
     margin-left: -10px;
+  }
+  .main-content {
+    &.grid-list {
+      .grid_3:nth-child(3n+1) {
+        margin-left: 0;
+      }
+      .grid_3:nth-child(3n+3) {
+        margin-right: 0;
+      }
+    }
   }
 }
 .footer {
@@ -400,6 +419,7 @@ ul.menu-stacked {
   background-position: center;
   background-repeat: repeat-x;
   text-align: center;
+  margin-bottom: 10px;
   h5 {
     display: inline-block;
     padding: 5px 15px;
@@ -409,6 +429,7 @@ ul.menu-stacked {
     background-color: #fff;
   }
 }
+
 .stylist-profile {
   border-top: 5px solid $PrimaryColor;
   padding: 10px;
@@ -504,5 +525,158 @@ ul.menu-stacked {
     overflow: hidden;
     width: 200px;
     height: 1.5em;
+  }
+}
+.item {
+  background-color: #fff;
+  @include box-shadow(0 3px rgba(0,0,0,.05));
+  margin-bottom: 30px;
+  .hover {
+    display: none;
+  }
+  &:hover {
+    .hover {
+      display: block;
+    }
+    .quick-view {
+      @include animation (moveFromTop 300ms ease-in-out);
+    }
+    .activity.inline {
+      @include animation (moveFromBottom 300ms ease-in-out);
+    }
+  }
+}
+.avatar-wrapper {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  .avatar {
+    position: absolute;
+  }
+  .hover {
+    background-color: rgba(134,228,192,.3);
+    //@include opacity (0.3);
+    @include wh(220,220); 
+    position: absolute;
+    overflow: hidden;
+    .activity.inline {
+      @include transition (all 300ms linear );
+      width: 210px;
+      bottom: 0;
+      position: absolute;
+      background-color: #fff;
+      display: block;
+      margin: 0;
+      padding: 5px;
+    }
+  }
+  .quick-view {
+    @include wh(40,40);
+    padding: 26px;
+    @include border-radius (999px);
+    background-color: #fff;
+    text-align: center;
+    font-size: 18px;
+    line-height: 18px;
+    font-family: 'PT Sans';
+    margin-left: -46px;
+    left: 50%;
+    position: absolute;
+    top: 45px;
+    color: $PrimaryColor;
+    @include transition (all 300ms linear);
+  }
+}
+.item-description {
+  @include clearfix;
+  .avatar {padding: 5px;}
+  .name {
+    padding-top: 5px;
+  }
+  .enname {
+    font-family: Didot;
+  }
+  .name , .enname {
+    line-height: 20px;
+  }
+}
+.collaboration-btn {
+  display: block;
+  @include wh(40,40);
+  @include hide-text;
+  @include bg('collaboration-btn.png');
+  background-color: $PrimaryColor;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 5px;
+}
+@include keyframes(moveFromBottom) {
+  from {
+    @include transform(translateY(200%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+
+@include keyframes(moveFromTop) {
+  from {
+    @include transform(translateY(-200%));
+    opacity: 0;
+  }
+  to {
+    @include transform(translateY(0%));
+    opacity: 1;
+  }
+}
+.share-to {
+  display: block;
+  cursor: pointer;
+  .share-to-tooltip {
+
+  }
+}
+.share-to-tooltip {
+  color: #fff;
+  display:none; 
+  text-align:center;
+  background-color: #e76049;
+  color:white; 
+  padding:10px;
+  width:60px;
+  position:fixed; 
+  z-index: 9999;
+  word-spacing: nowrap;
+  width: 144px;
+  a {
+    display: block;
+  }
+  ul {
+    padding-top: 10px;
+  }
+  li {
+    padding: 5px;
+    border-top: 1px solid #e96f5a;
+  }
+
+  &:hover {
+    .hover {
+      display: block;
+    }
+  }
+  &:after {
+    display: inline-block;
+    position: absolute;
+    left: -12px;
+    top: 4px;
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-right: 24px solid #e76049;
+    border-top: 16px solid transparent;
+    border-bottom: 16px solid transparent;
   }
 }

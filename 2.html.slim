@@ -4,8 +4,8 @@ html
     meta charset="utf-8"
     title Marry Me
     /! Stylesheet
-    link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"
-    link href="stylesheets/fancydropdown.css" media="screen, projection" rel="stylesheet" type="text/css"
+    == stylesheet_link_tag "screen"
+    == stylesheet_link_tag "fancydropdown"
     /! IE Conditional comment
     /[if lt IE 9]
       script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
@@ -87,10 +87,10 @@ html
                   .checkbox
                     label
                       input type="checkbox" checkbox #{i}
-
               .pnl
                 .pnlh
                   h5 日期 Data
+                img src='images/assets/data.png'
               .pnl
                 .pnlh
                   h5 其他條件 Other
@@ -105,11 +105,45 @@ html
                   .checkbox
                     label
                       input type="checkbox" checkbox #{i}
-            .main-content
+            .main-content.grid-list
+              -12.times do
+                .item.grid_3
+                  .avatar-wrapper
+                    == image_tag lorem_image("220x220"), :class => "avatar"
+                    .hover
+                      a.quick-view href="javascript:;"
+                        | Quick View 
+                      dl.activity.inline
+                        dt.trending
+                        dd 999
+                        dt.favorite
+                        dd 999
+                        dt.share
+                        dd.share-to
+                          | Share
+
+                  .item-description
+                    == image_tag lorem_image("40x40"), :class => "avatar fl"
+                    .fl
+                      h5.name =zh_lorem_name
+                      h5.enname =zh_lorem_name
+                    == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
+      / .share-to-tooltip
+      /   | 分享到 Share To...
+      /   ul
+      /     li
+      /       a href="javascript:;"
+      /         img src="images/share2fb.png" alt="share to facebook"
+      /     li
+      /       a href="javascript:;" 
+      /         img src="images/share2email.png" alt="share to E-mail"
+
+              
 
       == render :partial => "partials/footer"
       == render :partial => "partials/fb_plugin_sdk"
       script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
       script src="js/libs/jquery.fancydropdown.js"
+      script src="js/script.js"
       javascript:
         $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();
