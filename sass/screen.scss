@@ -216,7 +216,7 @@ h6,
   @include border-radius (8px);
   @include box-shadow (0px 2px 1px rgba(71,73,60,0.3));
   bottom: 0;
-  > ul > li {
+  > .ul > .li {
     height: 40px;
     float: left;
     padding-left: 15px;
@@ -224,12 +224,12 @@ h6,
     border-left: none;
     position: relative;
   }
-  > ul > li + li {
+  > .ul > .li + .li {
     border-left: 3px solid #78d1af;
   }
 }
 
-.select , .input-text , .search-btn  {
+.select , .input-text , .search-btn {
   height: 23px;
   line-height: 25px;
   background-color: #fff;
@@ -279,6 +279,7 @@ h6,
     background-position: center right;
     background-repeat: no-repeat;
     border-bottom: 2px solid #4f8972;
+    cursor: pointer;
   }
 }
 
@@ -477,76 +478,4 @@ ul.menu-stacked {
     width: 200px;
     height: 1.5em;
   }
-}
-
-/******/
-
-.menu-select {
-  margin-top: -2px;
-  z-index: 99999;
-  @include box-shadow (0 5px 5px rgba(0,0,0,.22));
-  border: 1px solid #f0f0f0;
-  border-bottom: 1px solid $PrimaryColor;
-  // &:before   {
-  //   display:block;
-  //   @include transform (rotate(45deg));
-  //   //border: 1px solid #ccc;
-  //   width:16px;
-  //   height:16px;
-  //   position: absolute;
-  //   background: #fff;
-  //   top: -8px;
-  //   left: 20px;
-  //   content: "";
-  //   z-index:-1;
-  // }
-  // &:after {
-  //   display:block;
-  //   width:21px;
-  //   height:18px;
-  //   position: absolute;
-  //   background: #fff;
-  //   top: -1px;
-  //   left: 18px;
-  //   content: "";
-  // }
-}
-.menu-select > li > a {
-  display: block;
-  text-align: center;
-  width: 150px;
-  padding: 4px 10px;
-  height: 25px;
-  line-height: 25px;
-  background: #fff;
-  color: #444;
-}
-.menu-select > li:last-child {
-  border-bottom: 2px solid $PrimaryColor;
-}
-.menu-select > li > a:hover,
-.menu-select > li > a:focus,
-.menu-select > li.active > a {
-  background: $PrimaryColor;
-  color: #fff;
-  font-weight: bold;
-}
-.menu-placeholder {
-  margin-top: 7px;
-}
-.menu-placeholder > a {
-  height: 23px;
-  line-height: 25px;
-  background-color: #fff;
-  padding: 2px 40px 0 10px;
-  display: inline-block;
-  color: $PrimaryColor;
-  font-size: 16px;
-  font-weight: bold;
-  @include border-radius (3px);
-  @include bg('select-arrow.png');
-  background-position: center right;
-  background-repeat: no-repeat;
-  @include box-shadow (0 1px rgba(255,255,255,.6), inset 0 2px rgba(0,0,0,.2));
-  //border:-bottom 1px solid transparent;
 }

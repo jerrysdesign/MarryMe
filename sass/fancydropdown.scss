@@ -1,0 +1,89 @@
+@import "compass/css3";
+@import "variables";
+@import "variables";
+
+.dropdown {
+  cursor: pointer;
+  height: 23px;
+  line-height: 25px;
+  background-color: #fff;
+  padding: 2px 40px 0 20px;
+  display: inline-block;
+  color: $PrimaryColor;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 7px;
+  @include border-radius (3px);
+  @include bg('select-arrow.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  @include box-shadow (0 1px rgba(255,255,255,.6), inset 0 2px rgba(0,0,0,.2));
+}
+.hover_dropdown {
+}
+.active_dropdown {
+}
+.dropdownlist {
+  border: 1px solid #fefefe;
+  cursor: pointer;
+  background-color: #fff;
+  @include box-shadow (0 5px 5px #D8D8D8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 99999;
+  margin-top: 8px;
+  li {
+    height: 23px;
+    display: block;
+    text-align: center;
+    width: 150px;
+    padding: 4px 10px;
+    height: 25px;
+    line-height: 25px;
+    background: #fff;
+    color: #444;
+    &.active , &:hover {
+      background: $PrimaryColor;
+      color: #fff;
+      font-weight: bold;
+      @include bg('dropdownlist-arr.png');
+      background-position: 20px center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+// .dropdown .imgholder, .dropdownlist .imgholder {
+//   float: left;
+//   width: 33px;
+//   height: 33px;
+//   padding: 1px;
+//   margin-right: 2px;
+// }
+
+// .dropdown p, .dropdownlist p {
+//   margin: 2px 4px 0px 2px;
+//   color: #8A8A8A;
+//   height: 31px;
+// }
+
+// .dropdown p.no-info, .dropdownlist p.no-info {
+//   height: 23px;
+//   padding: 8px 0 0 0;
+// }
+
+// .dropdown p {
+//   //background: url(arrowhead_down.png) no-repeat right 14px;
+//   strong {
+//     color: #262626;
+//   }
+// }
+
+// .dropdown_no-info p strong, .dropdownlist p strong {
+//   color: #262626;
+// }
+.imgholder {
+	display: none;
+}
