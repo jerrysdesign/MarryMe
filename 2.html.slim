@@ -72,51 +72,41 @@ html
       .main
         ol.breadcrumb
           li
-            a href="#" Home
-          li
-            a href="#" 給我造型師
+            a href="javascript:;" Home
           li.active
-            a href="#" 相簿相片列表
+            a href="javascript:;" 給我造型師
 
         .container_12
           .two-column 
             .sub
-              .stylist-profile
-                == image_tag lorem_image("200x200"), :class => "avatar"
-                h5 =zh_lorem_name
-                h5 =zh_lorem_name
-                hr
-                p =zh_lorem_paragraph
-                dl.activity.stacked
-                  dt.trending 人氣:
-                  dd 999
-                  dt.favorite 收藏數:
-                  dd 999
-                  dt.share 分享數:
-                  dd 999
-                a.back-btn href="javascript:;" 回造型師詳細頁面
+              h3.sub-header 條件設定
+              .pnl
+                .pnlh
+                  h5 戀愛ing
+                - (1..5).each do |i|
+                  .checkbox
+                    label
+                      input type="checkbox" checkbox #{i}
 
+              .pnl
+                .pnlh
+                  h5 日期 Data
+              .pnl
+                .pnlh
+                  h5 其他條件 Other
+                - (1..5).each do |i|
+                  .checkbox
+                    label
+                      input type="checkbox" checkbox #{i}
+              .pnl
+                .pnlh
+                  h5 熱門關鍵字 Hot
+                - (1..5).each do |i|
+                  .checkbox
+                    label
+                      input type="checkbox" checkbox #{i}
             .main-content
-              .photo-list-container
-                .ribbon.favorite
-                  .icon
-                .ribbon.share
-                  .icon
-                h3 =zh_lorem_sentence
-                dl.activity.inline
-                  dt.trending
-                  dd 999
-                  dt.favorite
-                  dd 999
-                  dt.share
-                  dd 999
-                p =zh_lorem_paragraph
-                ul.photo-list
-                  -12.times do
-                    li
-                      a href="javascript:;"
-                        == image_tag lorem_image("205x205"), :class => "photo"
-                      p =zh_lorem_sentence
+
       .footer
         .container_12
           .grid_3
