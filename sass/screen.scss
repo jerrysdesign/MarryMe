@@ -772,3 +772,13 @@ ul.menu-stacked {
     }
   }
 }
+.readmore-btn {
+  border: solid 2px $PrimaryColor;
+  background-color: #fff;
+  display: block;
+  @include wh(134,30);
+  margin: 0 auto;
+  line-height: 30px;
+  text-align: center;
+  clear: both;
+}

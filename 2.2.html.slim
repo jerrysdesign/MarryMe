@@ -101,7 +101,8 @@ html
                   h4.title ==zh_lorem_words 20
                   span.data =lorem_date.to_date
                   p =zh_lorem_words 45
-                  == link_to("more", "javascript:;", :class => "more")
+                  == link_to("more", "javascript:;", :class => "more") 
+            == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
           .grid_6
             h2.page-title.pt-5
               | 新人推薦分享
@@ -116,9 +117,8 @@ html
                     p =zh_lorem_words 20
                     == link_to("more", "javascript:;", :class => "more")
                     == link_to("新人小明", "javascript:;", :class => "arthor")
-
-
-          
+          .grid_6
+            == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
         .container_12
           .grid_12
             h2.page-title.pt-2
