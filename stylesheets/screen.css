@@ -713,6 +713,32 @@ ul.menu-stacked > li.active {
   padding-right: 5px;
 }
 
+/*頁面區塊標題*/
+.page-title {
+  width: 180px;
+  height: 20px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  margin: 30px 10px 10px;
+}
+.page-title.pt-1 {
+  background-image: url(../images/pt-s-pf.png);
+}
+.page-title.pt-2 {
+  background-image: url(../images/pt-s-p.png);
+}
+.page-title.pt-3 {
+  background-image: url(../images/pt-o-t.png);
+}
+.page-title.pt-4 {
+  background-image: url(../images/pt-new.png);
+}
+.page-title.pt-5 {
+  background-image: url(../images/pt-n-p.png);
+}
+
 .activity {
   clear: both;
   margin-bottom: 10px;

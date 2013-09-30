@@ -382,6 +382,28 @@ ul.menu-stacked {
     }
   }
 }
+/*頁面區塊標題*/
+.page-title {
+  @include wh(180,20);
+  @include hide-text;
+  display: block;
+  margin: 30px 10px 10px;
+  &.pt-1 {
+    @include bg('pt-s-pf.png');
+  }
+  &.pt-2 {
+    @include bg('pt-s-p.png');
+  }
+  &.pt-3 {
+    @include bg('pt-o-t.png');
+  }
+  &.pt-4 {
+    @include bg('pt-new.png');
+  }
+  &.pt-5 {
+    @include bg('pt-n-p.png');
+  }
+}
 .activity {
   @include clearfix;
   clear: both;
