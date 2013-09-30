@@ -734,3 +734,41 @@ ul.menu-stacked {
     border-bottom: 16px solid transparent;
   }
 }
+
+/*給我造型師.section*/
+.section-s {
+  padding: 10px 8px;
+  position: relative;
+  color: #999;
+  margin-bottom: 20px;
+  overflow: hidden;
+  .title { color: #000; font-size: 14px;}
+  .more { 
+    position: absolute;
+    right: 0 !important;
+    bottom: 0 !important;
+    @include wh(44,24);
+    @include bg('section-more.png');
+    @include hide-text;
+  }
+  .data {
+    //margin-bottom: 5px;
+  }
+  &.new {
+    height: 100px;
+    .avatar { float: left; }
+    .title , .data , p { margin-left: 120px; display: block; }
+  }
+  &.new-p {
+    height: 235px;
+    .avatar { margin-left: 10px; }
+    .title , .data , p  , .arthor { display: block; }
+    .arthor {
+      text-align: right;
+      &:before {
+        content: "by ";
+        font-size: 11px;
+      }
+    }
+  }
+}

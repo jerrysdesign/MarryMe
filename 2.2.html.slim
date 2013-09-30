@@ -94,20 +94,30 @@ html
           .grid_6
             h2.page-title.pt-4
               | 最新文章
-            .well.lb
-              p 最新文章
-            .well.lb
-              p 最新文章
+            -2.times do
+              .well.lb
+                .section-s.new
+                  == image_tag lorem_image("100x100"), :class => "avatar"
+                  h4.title ==zh_lorem_words 20
+                  span.data =lorem_date.to_date
+                  p =zh_lorem_words 45
+                  == link_to("more", "javascript:;", :class => "more")
           .grid_6
             h2.page-title.pt-5
               | 新人推薦分享
           .grid_6
-            .grid_2.well.tb
-              p 新人推薦分享
-            .grid_2.well.tb
-              p 新人推薦分享
-            .grid_2.well.tb
-              p 新人推薦分享
+            -3.times do
+              .grid_2
+                .well.tb
+                  .section-s.new-p
+                    == image_tag lorem_image("100x100"), :class => "avatar img-circle"
+                    h4.title 新人推薦分享棒
+                    span.data =lorem_date.to_date
+                    p =zh_lorem_words 20
+                    == link_to("more", "javascript:;", :class => "more")
+                    == link_to("新人小明", "javascript:;", :class => "arthor")
+
+
           
         .container_12
           .grid_12

@@ -283,6 +283,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #5e9f86;
 }
 
 img {
@@ -325,6 +326,14 @@ h6,
 
 .fr {
   float: right !important;
+}
+
+.img-circle {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
 }
 
 .grid_6 .grid_2:first-child {
@@ -393,7 +402,7 @@ h6,
 }
 
 .section {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 .section:before, .section:after {
   content: "";
@@ -1232,4 +1241,54 @@ ul.menu-stacked > li.active {
   border-right: 24px solid #e76049;
   border-top: 16px solid transparent;
   border-bottom: 16px solid transparent;
+}
+
+/*給我造型師.section*/
+.section-s {
+  padding: 10px 8px;
+  position: relative;
+  color: #999;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+.section-s .title {
+  color: #000;
+  font-size: 14px;
+}
+.section-s .more {
+  position: absolute;
+  right: 0 !important;
+  bottom: 0 !important;
+  width: 44px;
+  height: 24px;
+  background-image: url(../images/section-more.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.section-s.new {
+  height: 100px;
+}
+.section-s.new .avatar {
+  float: left;
+}
+.section-s.new .title, .section-s.new .data, .section-s.new p {
+  margin-left: 120px;
+  display: block;
+}
+.section-s.new-p {
+  height: 235px;
+}
+.section-s.new-p .avatar {
+  margin-left: 10px;
+}
+.section-s.new-p .title, .section-s.new-p .data, .section-s.new-p p, .section-s.new-p .arthor {
+  display: block;
+}
+.section-s.new-p .arthor {
+  text-align: right;
+}
+.section-s.new-p .arthor:before {
+  content: "by ";
+  font-size: 11px;
 }
