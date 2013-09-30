@@ -327,6 +327,13 @@ h6,
   float: right !important;
 }
 
+.grid_6 .grid_2:first-child {
+  margin-left: 0;
+}
+.grid_6 .grid_2:last-child {
+  margin-right: 0;
+}
+
 .wrapper {
   margin: 0 auto;
   width: 980px;
@@ -713,6 +720,29 @@ ul.menu-stacked > li.active {
   padding-right: 5px;
 }
 
+.well {
+  background-color: white;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-box-shadow: 1px 2px 5px 0px #cccccc;
+  -moz-box-shadow: 1px 2px 5px 0px #cccccc;
+  box-shadow: 1px 2px 5px 0px #cccccc;
+  margin-bottom: 10px;
+}
+.well.lb {
+  border-color: #86e4c0;
+  border-left-width: 5px;
+  border-left-style: solid;
+}
+.well.tb {
+  border-color: #86e4c0;
+  border-top-width: 5px;
+  border-top-style: solid;
+}
+
 /*頁面區塊標題*/
 .page-title {
   width: 180px;
@@ -722,6 +752,7 @@ ul.menu-stacked > li.active {
   overflow: hidden;
   display: block;
   margin: 30px 10px 10px;
+  clear: both;
 }
 .page-title.pt-1 {
   background-image: url(../images/pt-s-pf.png);
