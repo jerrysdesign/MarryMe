@@ -1249,7 +1249,6 @@ ul.menu-stacked > li.active {
   position: relative;
   color: #999;
   margin-bottom: 20px;
-  overflow: hidden;
 }
 .section-s .title {
   color: #000;
@@ -1291,6 +1290,36 @@ ul.menu-stacked > li.active {
 .section-s.new-p .arthor:before {
   content: "by ";
   font-size: 11px;
+}
+.section-s.s-pt .title, .section-s.s-pt p {
+  display: block;
+}
+.section-s.s-pt .avatar-pos {
+  position: relative;
+  height: 294px;
+}
+.section-s.s-pt .avatar-pos > .avatar:first-child {
+  width: 292px;
+  height: 292px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.section-s.s-pt .avatar-pos > .avatar:nth-child(2), .section-s.s-pt .avatar-pos > .avatar:last-child {
+  width: 142px;
+  height: 142px;
+  position: absolute;
+}
+.section-s.s-pt .avatar-pos > .avatar:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+.section-s.s-pt .avatar-pos > .avatar:last-child {
+  bottom: 0;
+  right: 0;
+}
+.section-s.s-pt .avatar-pos .avatar:nth-child(n+4) {
+  display: none;
 }
 
 .readmore-btn {

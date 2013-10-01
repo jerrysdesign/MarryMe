@@ -123,51 +123,25 @@ html
           .grid_12
             h2.page-title.pt-2
               | 造型師作品集
-          .grid_6
-            .well
-              p 造型師作品集
-          .grid_6
-            .well
-              p 造型師作品集
-
-          / .two-column 
-          /   .sub
-          /     .stylist-profile
-          /       == image_tag lorem_image("200x200"), :class => "avatar"
-          /       h5 =zh_lorem_name
-          /       h5 =zh_lorem_name
-          /       hr
-          /       p =zh_lorem_paragraph
-          /       dl.activity.stacked
-          /         dt.trending 人氣:
-          /         dd 999
-          /         dt.favorite 收藏數:
-          /         dd 999
-          /         dt.share 分享數:
-          /         dd 999
-          /       a.back-btn href="javascript:;" 回造型師詳細頁面
-
-          /   .main-content
-          /     .photo-list-container
-          /       .ribbon.favorite
-          /         .icon
-          /       .ribbon.share
-          /         .icon
-          /       h3 =zh_lorem_sentence
-          /       dl.activity.inline
-          /         dt.trending
-          /         dd 999
-          /         dt.favorite
-          /         dd 999
-          /         dt.share
-          /         dd 999
-          /       p =zh_lorem_paragraph
-          /       ul.photo-list
-          /         -12.times do
-          /           li
-          /             a href="javascript:;"
-          /               == image_tag lorem_image("205x205"), :class => "photo"
-          /             p =zh_lorem_sentence
+          -4.times do
+            .grid_6
+              .well
+                .section-s.s-pt
+                  h4.title ==zh_lorem_words 20
+                  p =zh_lorem_words 70
+                  .avatar-pos
+                    == image_tag lorem_image("292x292"), :class => "avatar"
+                    == image_tag lorem_image("142x142"), :class => "avatar"
+                    == image_tag lorem_image("142x142"), :class => "avatar"
+                  dl.activity.inline
+                    dt.trending
+                    dd 999
+                    dt.favorite
+                    dd 999
+                    dt.share
+                    dd.share-to
+                      | Share
+                  == link_to("more", "javascript:;", :class => "more")
       
       == render :partial => "partials/footer"
       == render :partial => "partials/fb_plugin_sdk"

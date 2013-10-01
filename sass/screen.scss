@@ -741,7 +741,6 @@ ul.menu-stacked {
   position: relative;
   color: #999;
   margin-bottom: 20px;
-  overflow: hidden;
   .title { color: #000; font-size: 14px;}
   .more { 
     position: absolute;
@@ -768,6 +767,36 @@ ul.menu-stacked {
       &:before {
         content: "by ";
         font-size: 11px;
+      }
+    }
+  }
+  &.s-pt {
+    .title , p {
+      display: block;
+     }
+    .avatar-pos {
+      position: relative;
+      height: 294px;
+      >.avatar:first-child { 
+        @include wh(292,292);
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      >.avatar:nth-child(2) , >.avatar:last-child { 
+        @include wh(142,142);
+        position: absolute;
+      }
+      >.avatar:nth-child(2) {
+        top: 0;
+        right: 0;
+      }
+      >.avatar:last-child {
+        bottom: 0;
+        right: 0;
+      }
+      .avatar:nth-child(n+4){ 
+        display: none;
       }
     }
   }
