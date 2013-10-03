@@ -830,6 +830,32 @@ ul.menu-stacked > li.active {
   background-position: 0 center;
   background-repeat: no-repeat;
 }
+.activity.stacked dt {
+  width: 4em;
+  padding-left: 24px;
+  float: left;
+}
+.activity.stacked dd {
+  width: auto;
+  padding-left: inherit;
+  margin-left: 5em;
+}
+.activity.inline dt, .activity.inline dd {
+  float: left;
+}
+.activity.inline dt {
+  width: 1.5em;
+}
+.activity.inline dd {
+  width: 3em;
+}
+.activity.inline.text dt {
+  width: 3.5em;
+  padding-left: 1.5em;
+}
+.activity.inline.text dd {
+  width: 3em;
+}
 
 /*.sub*/
 .sub {
@@ -876,17 +902,6 @@ ul.menu-stacked > li.active {
 }
 .stylist-profile p {
   margin-bottom: 20px;
-}
-
-.activity.stacked dt {
-  width: 4em;
-  padding-left: 24px;
-  float: left;
-}
-.activity.stacked dd {
-  width: auto;
-  padding-left: inherit;
-  margin-left: 5em;
 }
 
 .back-btn {
@@ -949,16 +964,6 @@ ul.menu-stacked > li.active {
   height: 16px;
   margin-left: 12px;
   margin-top: 14px;
-}
-
-.activity.inline dt, .activity.inline dd {
-  float: left;
-}
-.activity.inline dt {
-  width: 1.5em;
-}
-.activity.inline dd {
-  width: 3em;
 }
 
 .photo-list > li {
@@ -1340,7 +1345,12 @@ ul.menu-stacked > li.active {
   padding: 0;
 }
 .section-s.tab .profile {
+  margin: 0 -10px;
+  padding: 5px 20px;
   color: #333;
+  -webkit-box-shadow: 0 2px 5px #e6e6e6;
+  -moz-box-shadow: 0 2px 5px #e6e6e6;
+  box-shadow: 0 2px 5px #e6e6e6;
 }
 .section-s.tab .profile h3 {
   font-size: 18px;
@@ -1489,6 +1499,24 @@ ul.tabs li.active {
 }
 
 .tab_content {
-  padding: 20px;
+  padding: 10px;
+  padding-bottom: 0;
   display: none;
+}
+
+.contact {
+  padding: 10px;
+  overflow: hidden;
+}
+.contact dt {
+  float: left;
+  width: 8em;
+  color: #333;
+  font-weight: bold;
+  line-height: 28px;
+}
+.contact dd {
+  margin-left: 9em;
+  color: #999;
+  line-height: 28px;
 }
