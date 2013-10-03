@@ -83,7 +83,34 @@ html
             h2.page-title.pt-1
               | 造型師基本資料
             .well
-              p 造型師基本資料
+              .section-s.tab
+                ul.tabs
+                  li.active rel="tab1" 基本資料/聯絡
+                  li rel="tab2" 簡介/經歷
+                  li rel="tab3" 服務地區
+                  li rel="tab4" 服務項目
+                .tab_container
+                  h3.d_active.tab_drawer_heading rel="tab1"
+                  #tab1.tab_content
+                    .profile
+                      == image_tag lorem_image("100x100"), :class => "avatar left"
+                      .right
+                        h3
+                          =zh_lorem_name
+                          |  / 
+                          =zh_lorem_name
+                        hr
+                        p =zh_lorem_paragraph
+
+                  h3.tab_drawer_heading rel="tab2"
+                  #tab2.tab_content
+                    
+                  h3.tab_drawer_heading rel="tab3"
+                  #tab3.tab_content
+ 
+                  h3.tab_drawer_heading rel="tab4"
+                  #tab4.tab_content
+
           .grid_6
             h2.page-title.pt-3
               | 造型師開放預約時間
