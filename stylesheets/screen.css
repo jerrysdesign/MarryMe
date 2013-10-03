@@ -1407,3 +1407,15 @@ ul.menu-stacked > li.active {
 .calendar + .calendar {
   margin-left: 10px;
 }
+
+.last-time {
+  display: block;
+  text-align: right;
+}
+
+.booking-btn {
+  display: block;
+}
+.booking-btn img {
+  margin: 10px auto -50px auto;
+}
