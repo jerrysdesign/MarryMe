@@ -1,0 +1,262 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    title Marry Me
+    /! Stylesheet
+    link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"
+    link href="stylesheets/fancydropdown.css" media="screen, projection" rel="stylesheet" type="text/css"
+    /! IE Conditional comment
+    /[if lt IE 9]
+      script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
+  body
+    .wrapper
+      .header
+        .logo-mask
+          .logo-circle
+        .navbar
+          ul.nav.left
+            //ative時 li:class => "active"
+            li
+              a href="javascript:;"
+                span 結婚這檔事
+            li.active
+              a href="javascript:;"
+                span 給我造型師
+            li
+              a href="javascript:;"
+                span 給我婚攝/影
+          ul.nav.right
+            li
+              a href="javascript:;"
+                span 活動專區
+            li
+              a href="javascript:;"
+                span 加入Marry Me
+            li
+              a href="javascript:;"
+                span 關於Marry Me
+        .logo-mask
+          .logo-circle-inner
+            .logo
+      .banner
+        .page-heaer
+          img src='images/page-title.png' alt=''
+          / h1
+          /   | 結婚這檔事
+          /   span about marry
+        .login
+          a href='javasript:;' 登入
+          |   
+          | / 
+          |  
+          a href='javasript:;' 註冊
+        form.search-bar
+          .ul
+            .li
+              select#Menu1
+                - (1..5).each do |i|
+                  option value='select #{i}' select #{i}
+            .li
+              select#Menu2
+                - (1..5).each do |i|
+                  option value='select #{i}' select #{i}
+            .li
+              select#Menu3
+                - (1..5).each do |i|
+                  option value='select #{i}' select #{i}
+            .li
+              .search-box
+                input.input-text type="text"
+                button.search-btn type="submit" 搜尋
+      .main
+        ol.breadcrumb
+          li
+            a href="#" Home
+          li
+            a href="#" 給我造型師
+          li.active
+            a href="#" 相簿相片列表
+
+        .container_12
+          .grid_6
+            h2.page-title.pt-1
+              | 造型師基本資料
+            .well
+              .section-s.tab
+                ul.tabs
+                  li.active rel="tab1" 基本資料/聯絡
+                  li rel="tab2" 簡介/經歷
+                  li rel="tab3" 服務地區
+                  li rel="tab4" 服務項目
+                .tab_container
+                  h3.d_active.tab_drawer_heading rel="tab1"
+                  #tab1.tab_content
+                    .profile
+                      == image_tag lorem_image("100x100"), :class => "avatar left"
+                      .right
+                        h3
+                          =zh_lorem_name
+                          |  / 
+                          =zh_lorem_name
+                        hr
+                        p =zh_lorem_paragraph
+                        dl.activity.inline.text
+                          dt.trending 人氣:
+                          dd 999
+                          dt.favorite 收藏數:
+                          dd 999
+                          dt.share 分享數:
+                          dd 999
+                    dl.contact
+                      .table-row
+                        dt 電子信箱：
+                        dd mingle.1099@gmil.com
+                      .table-row
+                        dt 手機號碼：
+                        dd 0939-999-100
+                      .table-row
+                        dt 其他通訊APP：
+                        dd Leeminf
+                      .table-row
+                        dt FB粉絲團：
+                        dd www.facebook.com/Willy.Tsao
+                      .table-row
+                        dt 個人網站：
+                        dd http: //leemingle.com
+                      .table-row
+                        dt 其他連結：
+                        dd 
+
+                  h3.tab_drawer_heading rel="tab2"
+                  #tab2.tab_content
+                    h3
+                      =zh_lorem_name
+                      |  / 
+                      =zh_lorem_name
+                    hr
+                    p =zh_lorem_paragraph
+                    
+                  h3.tab_drawer_heading rel="tab3"
+                  #tab3.tab_content
+                    dl.service-counties
+                      .table-row
+                        dt 台北市
+                        dd - 不加收
+                      .table-row
+                        dt 新北市
+                        dd - 實報實銷
+                      .table-row
+                        dt 外縣市
+                        dd - 實報實銷
+                      .table-row
+                        dt 外島
+                        dd - 機票、飯店、車資，均由客戶安排。
+                      .table-row
+                        dt 國際服務
+                        dd - 機票、飯店、車資，均由客戶安排。
+ 
+                  h3.tab_drawer_heading rel="tab4"
+                  #tab4.tab_content
+                    /! Jimmy 請確認
+                    /! 同結構資料無法分欄 
+                    /! 資料都是由上往下，不然就就是由左往右。
+                    .s-scrool
+                      -4.times do
+                        .service
+                          h4 ==zh_lorem_words 10
+                          ul
+                            -10.times do
+                              li ==zh_lorem_words 10
+
+          .grid_6
+            h2.page-title.pt-3
+              | 造型師開放預約時間
+            .well
+              .section-s.cal
+                .calendar
+                  p
+                  ul.group
+                    li Mo
+                    li Tu
+                    li We
+                    li Th
+                    li Fr
+                    li Sa
+                    li Su
+                .calendar
+                  p
+                  ul.group
+                    li Mo
+                    li Tu
+                    li We
+                    li Th
+                    li Fr
+                    li Sa
+                    li Su
+                p.last-time 最後更新時間：2013.09.11
+                h4.title 預約須知
+                p 婚禮的規劃從來都不是一件簡單的事，尤其在婚禮的前幾天這個關鍵時刻，充滿了壓力和恐慌，這裡提供一些小技巧讓你圓滿地解決這些事。記得盡量避免拖延這個計劃，否則你只來得及在一個時間點結束你的所有計劃，並且期待這個大日子來臨。
+                a.booking-btn href="javascript:;"
+                  img src="images/booking-btn.png" alt="我有需求，發送訊息"
+
+        .container_12
+          .grid_6
+            h2.page-title.pt-4
+              | 最新文章
+            -2.times do
+              .well.lb
+                .section-s.new
+                  == image_tag lorem_image("100x100"), :class => "avatar"
+                  h4.title ==zh_lorem_words 20
+                  span.data =lorem_date.to_date
+                  p =zh_lorem_words 45
+                  == link_to("more", "javascript:;", :class => "more") 
+            == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
+          .grid_6
+            h2.page-title.pt-5
+              | 新人推薦分享
+          .grid_6
+            -3.times do
+              .grid_2
+                .well.tb
+                  .section-s.new-p
+                    == image_tag lorem_image("100x100"), :class => "avatar img-circle"
+                    h4.title 新人推薦分享棒
+                    span.data =lorem_date.to_date
+                    p =zh_lorem_words 20
+                    == link_to("more", "javascript:;", :class => "more")
+                    == link_to("新人小明", "javascript:;", :class => "arthor")
+          .grid_6
+            == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
+        .container_12
+          .grid_12
+            h2.page-title.pt-2
+              | 造型師作品集
+          -4.times do
+            .grid_6
+              .well
+                .section-s.s-pt
+                  h4.title ==zh_lorem_words 20
+                  p =zh_lorem_words 70
+                  .avatar-pos.gamma-gallery
+                    == image_tag lorem_image("300x300"), :class => "avatar"
+                    == image_tag lorem_image("300x300"), :class => "avatar"
+                    == image_tag lorem_image("300x300"), :class => "avatar"
+                  dl.activity.inline
+                    dt.trending
+                    dd 999
+                    dt.favorite
+                    dd 999
+                    dt.share
+                    dd.share-to
+                      | Share
+                  == link_to("more", "javascript:;", :class => "more")
+      
+      == render :partial => "partials/footer"
+      == render :partial => "partials/fb_plugin_sdk"
+      script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
+      script src="js/libs/jquery.fancydropdown.js"
+      script src="js/script.js"
+      javascript:
+        $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();

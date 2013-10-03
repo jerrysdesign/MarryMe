@@ -1525,3 +1525,21 @@ ul.tabs li.active {
   line-height: 28px;
   padding-left: 1em;
 }
+
+.service {
+  width: 200px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  float: left;
+}
+.service h4 {
+  font-size: 12px;
+  color: #333;
+}
+
+.s-scrool {
+  width: 450px;
+  height: 340px;
+  -ms-overflow-y: scroll;
+  overflow-y: scroll;
+}

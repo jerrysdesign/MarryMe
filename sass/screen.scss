@@ -996,3 +996,20 @@ ul.tabs {
     }
   }
 }
+.service {
+  width: 200px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  float: left;
+  h4 {
+    font-size: 12px;
+    color: #333;
+  }
+}
+.s-scrool {
+  width: 450px;
+  height: 340px;
+  -ms-overflow-y: scroll;
+  overflow-y: scroll;
+  
+}
