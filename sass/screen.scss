@@ -977,19 +977,22 @@ ul.tabs {
     border-color: #e9e9e9;
   }
 }
-.contact {
+.contact , .service-counties {
   padding: 10px;
   overflow: hidden;
-  dt {
-    float: left;
-    width: 8em;
-    color: #333;
-    font-weight: bold;
-    line-height: 28px;
-  }
-  dd {
-    margin-left: 9em;
-    color: #999;
-    line-height: 28px;
+  .table-row {
+    display: table-row;
+    > dt {
+      display: table-cell;
+      color: #333;
+      font-weight: bold;
+      line-height: 28px;
+    }
+    > dd {
+      display: table-cell;
+      color: #999;
+      line-height: 28px;
+      padding-left: 1em;
+    }
   }
 }
