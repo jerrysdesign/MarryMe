@@ -829,12 +829,6 @@ ul.menu-stacked {
       margin: 0 -10px;
       padding: 5px 20px;
       color: #333;
-      h3 {
-        font-size: 18px;
-      }
-      hr {
-        border-color: #e9e9e9;
-      }
       @include box-shadow (0 2px 5px rgb( 230, 230, 230 ));
     }
     .left {
@@ -974,6 +968,14 @@ ul.tabs {
   padding: 10px;
   padding-bottom: 0;
   display: none;
+  min-height: 340px;
+  h3 {
+    font-size: 18px;
+    color: #333;
+  }
+  hr {
+    border-color: #e9e9e9;
+  }
 }
 .contact {
   padding: 10px;
