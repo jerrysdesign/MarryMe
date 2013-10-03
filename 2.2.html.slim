@@ -88,8 +88,29 @@ html
             h2.page-title.pt-3
               | 造型師開放預約時間
             .well
-              p 造型師開放預約時間
-        
+              .section-s.cal
+                .calendar
+                  p
+                  ul.group
+                    li Mo
+                    li Tu
+                    li We
+                    li Th
+                    li Fr
+                    li Sa
+                    li Su
+
+                .calendar
+                  p
+                  ul.group
+                    li Mo
+                    li Tu
+                    li We
+                    li Th
+                    li Fr
+                    li Sa
+                    li Su
+
         .container_12
           .grid_6
             h2.page-title.pt-4
@@ -129,10 +150,10 @@ html
                 .section-s.s-pt
                   h4.title ==zh_lorem_words 20
                   p =zh_lorem_words 70
-                  .avatar-pos
-                    == image_tag lorem_image("292x292"), :class => "avatar"
-                    == image_tag lorem_image("142x142"), :class => "avatar"
-                    == image_tag lorem_image("142x142"), :class => "avatar"
+                  .avatar-pos.gamma-gallery
+                    == image_tag lorem_image("300x300"), :class => "avatar"
+                    == image_tag lorem_image("300x300"), :class => "avatar"
+                    == image_tag lorem_image("300x300"), :class => "avatar"
                   dl.activity.inline
                     dt.trending
                     dd 999
@@ -147,5 +168,6 @@ html
       == render :partial => "partials/fb_plugin_sdk"
       script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
       script src="js/libs/jquery.fancydropdown.js"
+      script src="js/script.js"
       javascript:
         $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();

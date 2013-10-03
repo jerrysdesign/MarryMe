@@ -73,8 +73,17 @@ h6,
 .fr {
   float: right !important;
 }
+.center {
+  text-align: center;
+}
 .img-circle {
   @include border-radius (50%);
+}
+.circle {
+  @include border-radius (100%);
+}
+%circle {
+  @include border-radius (100%);
 }
 // 新人推薦分享
 .grid_6 .grid_2 {
@@ -800,6 +809,9 @@ ul.menu-stacked {
       }
     }
   }
+  &.cal {
+    padding: 15px 25px;
+  }
 }
 .readmore-btn {
   border: solid 2px $PrimaryColor;
@@ -810,4 +822,64 @@ ul.menu-stacked {
   line-height: 30px;
   text-align: center;
   clear: both;
+}
+
+$calendarBg: #2e3641;
+
+.calendar {
+  background: $PrimaryColor;
+  color: #fff;
+  max-width: 200px;
+  min-height: 200px;
+  margin: 0 auto;
+  text-align: center;
+  display: inline-block;
+  p {
+    background: $calendarBg;
+    line-height: 35px;
+    border: 1px solid #343c47;
+  }
+  .group {
+  }
+  .group:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .prev , .next {
+    width: 35px;
+    line-height: 35px;
+    cursor: pointer;
+  }
+  .prev {
+    border-right: 1px solid #343c47;
+    float: left;
+  }
+  .next {
+    border-left: 1px solid #343c47;
+    float: right;
+  }
+  li {
+    float: left;
+    width: -webkit-calc(100%/7);
+    text-align: center;
+    padding: 0;
+    cursor: pointer;
+    font-size: 15px;
+    &:nth-child(n+8) {
+      &:hover,&.active {
+        font-weight: bold;
+        @include circle;
+        background-color: $calendarBg;
+      }
+    }
+    &:nth-child(-n+7) {
+      font-size: 11px;
+      background: $calendarBg;
+      cursor: inherit;
+    }
+  }
+}
+.calendar+.calendar {
+  margin-left: 10px;
 }
