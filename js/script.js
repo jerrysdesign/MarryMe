@@ -98,6 +98,7 @@ $(function(){
     $( '.modal' ).fadeIn();
     $( '.modal-background' ).fadeTo( 300, .5 );
     $( '.wrapper').addClass('avgrund-active');
+    $('body').append($('.modal.styled'));
     e.preventDefault();
   });
   $( '.modal-close' ).on( 'click', function(e) {

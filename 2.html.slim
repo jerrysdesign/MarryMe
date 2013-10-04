@@ -49,7 +49,7 @@
             .avatar-wrapper
               == image_tag lorem_image("220x220"), :class => "avatar"
               .hover
-                a.quick-view href="javascript:;"
+                a.quick-view.show-modal href="javascript:;"
                   | Quick View 
                 dl.activity.inline
                   dt.trending
@@ -66,12 +66,4 @@
                 h5.name =zh_lorem_name
                 h5.enname =zh_lorem_name
               == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
-/ .share-to-tooltip
-/   | 分享到 Share To...
-/   ul
-/     li
-/       a href="javascript:;"
-/         img src="images/share2fb.png" alt="share to facebook"
-/     li
-/       a href="javascript:;" 
-/         img src="images/share2email.png" alt="share to E-mail"
+== render :partial => "partials/modal"
