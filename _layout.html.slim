@@ -69,78 +69,11 @@ html
               .search-box
                 input.input-text type="text"
                 button.search-btn type="submit" 搜尋
-      .main
-        ol.breadcrumb
-          li
-            a href="javascript:;" Home
-          li.active
-            a href="javascript:;" 給我造型師
-
-        .container_12
-          .two-column 
-            .sub
-              h3.sub-header 條件設定
-              .pnl
-                .pnlh
-                  h5 戀愛ing
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-              .pnl
-                .pnlh
-                  h5 日期 Data
-                img src='images/assets/data.png'
-              .pnl
-                .pnlh
-                  h5 其他條件 Other
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-              .pnl
-                .pnlh
-                  h5 熱門關鍵字 Hot
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-            .main-content.grid-list
-              -12.times do
-                .item.grid_3
-                  .avatar-wrapper
-                    == image_tag lorem_image("220x220"), :class => "avatar"
-                    .hover
-                      a.quick-view href="javascript:;"
-                        | Quick View 
-                      dl.activity.inline
-                        dt.trending
-                        dd 999
-                        dt.favorite
-                        dd 999
-                        dt.share
-                        dd.share-to
-                          | Share
-
-                  .item-description
-                    == image_tag lorem_image("40x40"), :class => "avatar fl"
-                    .fl
-                      h5.name =zh_lorem_name
-                      h5.enname =zh_lorem_name
-                    == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
-      / .share-to-tooltip
-      /   | 分享到 Share To...
-      /   ul
-      /     li
-      /       a href="javascript:;"
-      /         img src="images/share2fb.png" alt="share to facebook"
-      /     li
-      /       a href="javascript:;" 
-      /         img src="images/share2email.png" alt="share to E-mail"
-
-              
-
+      == yield
       == render :partial => "partials/footer"
+      a.show-modal href="javascript:;"  Show moda
+      
+      .modal-background
       == render :partial => "partials/fb_plugin_sdk"
       script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
       script src="js/libs/jquery.fancydropdown.js"
