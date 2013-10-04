@@ -1013,3 +1013,44 @@ ul.tabs {
   overflow-y: scroll;
   
 }
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  @include box-sizing (border-box);
+  @include transform (translate(-50%, -50%));
+  z-index: 9999;
+  &.styled {
+    width: 820px;
+    max-height: 620px;
+    overflow: auto;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #222;
+    border-top: 10px solid $PrimaryColor;
+    @include border-radius (3px);
+    @include box-shadow (0 3px 14px -4px black);
+  }
+  .modal-close {
+    @include wh(38,32);
+    @include bg('modalclose.png');
+    @include hide-text;
+    display: block;
+    float: right;
+    margin: -20px;
+  }
+}
+.modal-background {
+  display: none;
+  position: fixed;
+  background: #000;
+  background: rgba(0,0,0,.95);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  @include box-sizing (border-box);
+}

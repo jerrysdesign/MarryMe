@@ -62,8 +62,8 @@ $(function(){
   $("ul.tabs li").click(function() {
 
     $(".tab_content").hide();
-    var activeTab = $(this).attr("rel"); 
-    $("#"+activeTab).fadeIn();    
+    var activeTab = $(this).attr("rel");
+    $("#"+activeTab).fadeIn();
 
     $("ul.tabs li").removeClass("active");
     $(this).addClass("active");
@@ -76,7 +76,7 @@ $(function(){
   $(".tab_drawer_heading").click(function() {
     
     $(".tab_content").hide();
-    var d_activeTab = $(this).attr("rel"); 
+    var d_activeTab = $(this).attr("rel");
     $("#"+d_activeTab).fadeIn();
 
   $(".tab_drawer_heading").removeClass("d_active");
@@ -92,4 +92,18 @@ $(function(){
    of last tab */
   $('ul.tabs li').last().addClass("tab_last");
 });
- 
+
+$(function(){
+  $( '.show-modal' ).on( 'click', function(e) {
+    $( '.modal' ).fadeIn();
+    $( '.modal-background' ).fadeTo( 500, .5 );
+    e.preventDefault();
+  });
+  $( '.modal-close' ).on( 'click', function(e) {
+    $( '.modal, .modal-background' ).fadeOut();
+    e.preventDefault();
+  });
+  $(document).keyup(function(e) {
+    if (e.keyCode == 27) {$( '.modal, .modal-background' ).fadeOut();}   // esc
+  });
+});

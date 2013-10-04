@@ -1543,3 +1543,62 @@ ul.tabs li.active {
   -ms-overflow-y: scroll;
   overflow-y: scroll;
 }
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+.modal.styled {
+  width: 820px;
+  max-height: 620px;
+  overflow: auto;
+  background: #fff;
+  padding: 20px;
+  border: 1px solid #222;
+  border-top: 10px solid #86e4c0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 14px -4px black;
+  -moz-box-shadow: 0 3px 14px -4px black;
+  box-shadow: 0 3px 14px -4px black;
+}
+.modal .modal-close {
+  width: 38px;
+  height: 32px;
+  background-image: url(../images/modalclose.png);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  float: right;
+  margin: -20px;
+}
+
+.modal-background {
+  display: none;
+  position: fixed;
+  background: #000;
+  background: rgba(0, 0, 0, 0.95);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
