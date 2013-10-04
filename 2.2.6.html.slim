@@ -1,128 +1,50 @@
-doctype html
-html
-  head
-    meta charset="utf-8"
-    title Marry Me
-    /! Stylesheet
-    link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css"
-    link href="stylesheets/fancydropdown.css" media="screen, projection" rel="stylesheet" type="text/css"
-    /! IE Conditional comment
-    /[if lt IE 9]
-      script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
-  body
-    .wrapper
-      .header
-        .logo-mask
-          .logo-circle
-        .navbar
-          ul.nav.left
-            //ative時 li:class => "active"
-            li
-              a href="javascript:;"
-                span 結婚這檔事
-            li.active
-              a href="javascript:;"
-                span 給我造型師
-            li
-              a href="javascript:;"
-                span 給我婚攝/影
-          ul.nav.right
-            li
-              a href="javascript:;"
-                span 活動專區
-            li
-              a href="javascript:;"
-                span 加入Marry Me
-            li
-              a href="javascript:;"
-                span 關於Marry Me
-        .logo-mask
-          .logo-circle-inner
-            .logo
-      .banner
-        .page-heaer
-          img src='images/page-title.png' alt=''
-          / h1
-          /   | 結婚這檔事
-          /   span about marry
-        .login
-          a href='javasript:;' 登入
-          |   
-          | / 
-          |  
-          a href='javasript:;' 註冊
-        form.search-bar
-          .ul
-            .li
-              select#Menu1
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              select#Menu2
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              select#Menu3
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              .search-box
-                input.input-text type="text"
-                button.search-btn type="submit" 搜尋
-      .main
-        ol.breadcrumb
-          li
-            a href="#" Home
-          li
-            a href="#" 給我造型師
-          li.active
-            a href="#" 相簿相片列表
+.main
+  ol.breadcrumb
+    li
+      a href="#" Home
+    li
+      a href="#" 給我造型師
+    li.active
+      a href="#" 相簿相片列表
 
-        .container_12
-          h2.page-title.pt-1
-            | 造型師基本資料
-          .two-column 
-            .sub
-              .stylist-profile
-                == image_tag lorem_image("200x200"), :class => "avatar"
-                h5 =zh_lorem_name
-                h5 =zh_lorem_name
-                hr
-                p =zh_lorem_paragraph
-                dl.activity.stacked
-                  dt.trending 人氣:
-                  dd 999
-                  dt.favorite 收藏數:
-                  dd 999
-                  dt.share 分享數:
-                  dd 999
-                a.back-btn href="javascript:;" 回造型師詳細頁面
+  .container_12
+    h2.page-title.pt-1
+      | 造型師基本資料
+    .two-column 
+      .sub
+        .stylist-profile
+          == image_tag lorem_image("200x200"), :class => "avatar"
+          h5 =zh_lorem_name
+          h5 =zh_lorem_name
+          hr
+          p =zh_lorem_paragraph
+          dl.activity.stacked
+            dt.trending 人氣:
+            dd 999
+            dt.favorite 收藏數:
+            dd 999
+            dt.share 分享數:
+            dd 999
+          a.back-btn href="javascript:;" 回造型師詳細頁面
 
-            .main-content
-              .photo-list-container
-                .ribbon.favorite
-                  .icon
-                .ribbon.share
-                  .icon
-                h3 =zh_lorem_sentence
-                dl.activity.inline
-                  dt.trending
-                  dd 999
-                  dt.favorite
-                  dd 999
-                  dt.share
-                  dd 999
-                p =zh_lorem_paragraph
-                ul.photo-list
-                  -12.times do
-                    li
-                      a href="javascript:;"
-                        == image_tag lorem_image("205x205"), :class => "photo"
-                      p =zh_lorem_sentence
-      
-      == render :partial => "partials/footer"
-      == render :partial => "partials/fb_plugin_sdk"
-      script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-      script src="js/libs/jquery.fancydropdown.js"
-      javascript:
-        $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();
+      .main-content
+        .photo-list-container
+          .ribbon.favorite
+            .icon
+          .ribbon.share
+            .icon
+          h3 =zh_lorem_sentence
+          dl.activity.inline
+            dt.trending
+            dd 999
+            dt.favorite
+            dd 999
+            dt.share
+            dd 999
+          p =zh_lorem_paragraph
+          ul.photo-list
+            -12.times do
+              li
+                a href="javascript:;"
+                  == image_tag lorem_image("205x205"), :class => "photo"
+                p =zh_lorem_sentence

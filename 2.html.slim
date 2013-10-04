@@ -1,149 +1,68 @@
-doctype html
-html
-  head
-    meta charset="utf-8"
-    title Marry Me
-    /! Stylesheet
-    == stylesheet_link_tag "screen"
-    == stylesheet_link_tag "fancydropdown"
-    /! IE Conditional comment
-    /[if lt IE 9]
-      script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.2/html5shiv.js"
-  body
-    .wrapper
-      .header
-        .logo-mask
-          .logo-circle
-        .navbar
-          ul.nav.left
-            //ative時 li:class => "active"
-            li
-              a href="javascript:;"
-                span 結婚這檔事
-            li.active
-              a href="javascript:;"
-                span 給我造型師
-            li
-              a href="javascript:;"
-                span 給我婚攝/影
-          ul.nav.right
-            li
-              a href="javascript:;"
-                span 活動專區
-            li
-              a href="javascript:;"
-                span 加入Marry Me
-            li
-              a href="javascript:;"
-                span 關於Marry Me
-        .logo-mask
-          .logo-circle-inner
-            .logo
-      .banner
-        .page-heaer
-          img src='images/page-title.png' alt=''
-          / h1
-          /   | 結婚這檔事
-          /   span about marry
-        .login
-          a href='javasript:;' 登入
-          |   
-          | / 
-          |  
-          a href='javasript:;' 註冊
-        form.search-bar
-          .ul
-            .li
-              select#Menu1
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              select#Menu2
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              select#Menu3
-                - (1..5).each do |i|
-                  option value='select #{i}' select #{i}
-            .li
-              .search-box
-                input.input-text type="text"
-                button.search-btn type="submit" 搜尋
-      .main
-        ol.breadcrumb
-          li
-            a href="javascript:;" Home
-          li.active
-            a href="javascript:;" 給我造型師
+.main
+  ol.breadcrumb
+    li
+      a href="javascript:;" Home
+    li.active
+      a href="javascript:;" 給我造型師
 
-        .container_12
-          .two-column 
-            .sub
-              h3.sub-header 條件設定
-              .pnl
-                .pnlh
-                  h5 戀愛ing
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-              .pnl
-                .pnlh
-                  h5 日期 Data
-                img src='images/assets/data.png'
-              .pnl
-                .pnlh
-                  h5 其他條件 Other
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-              .pnl
-                .pnlh
-                  h5 熱門關鍵字 Hot
-                - (1..5).each do |i|
-                  .checkbox
-                    label
-                      input type="checkbox" checkbox #{i}
-            .main-content.grid-list
-              -12.times do
-                .item.grid_3
-                  .avatar-wrapper
-                    == image_tag lorem_image("220x220"), :class => "avatar"
-                    .hover
-                      a.quick-view href="javascript:;"
-                        | Quick View 
-                      dl.activity.inline
-                        dt.trending
-                        dd 999
-                        dt.favorite
-                        dd 999
-                        dt.share
-                        dd.share-to
-                          | Share
+  .container_12
+    .two-column 
+      .sub
+        h3.sub-header 條件設定
+        .pnl
+          .pnlh
+            h5 戀愛ing
+          - (1..5).each do |i|
+            .checkbox
+              label
+                input type="checkbox" checkbox #{i}
+        .pnl
+          .pnlh
+            h5 日期 Data
+          img src='images/assets/data.png'
+        .pnl
+          .pnlh
+            h5 其他條件 Other
+          - (1..5).each do |i|
+            .checkbox
+              label
+                input type="checkbox" checkbox #{i}
+        .pnl
+          .pnlh
+            h5 熱門關鍵字 Hot
+          - (1..5).each do |i|
+            .checkbox
+              label
+                input type="checkbox" checkbox #{i}
+      .main-content.grid-list
+        -12.times do
+          .item.grid_3
+            .avatar-wrapper
+              == image_tag lorem_image("220x220"), :class => "avatar"
+              .hover
+                a.quick-view href="javascript:;"
+                  | Quick View 
+                dl.activity.inline
+                  dt.trending
+                  dd 999
+                  dt.favorite
+                  dd 999
+                  dt.share
+                  dd.share-to
+                    | Share
 
-                  .item-description
-                    == image_tag lorem_image("40x40"), :class => "avatar fl"
-                    .fl
-                      h5.name =zh_lorem_name
-                      h5.enname =zh_lorem_name
-                    == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
-      / .share-to-tooltip
-      /   | 分享到 Share To...
-      /   ul
-      /     li
-      /       a href="javascript:;"
-      /         img src="images/share2fb.png" alt="share to facebook"
-      /     li
-      /       a href="javascript:;" 
-      /         img src="images/share2email.png" alt="share to E-mail"
-
-              
-
-      == render :partial => "partials/footer"
-      == render :partial => "partials/fb_plugin_sdk"
-      script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-      script src="js/libs/jquery.fancydropdown.js"
-      script src="js/script.js"
-      javascript:
-        $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();
+            .item-description
+              == image_tag lorem_image("40x40"), :class => "avatar fl"
+              .fl
+                h5.name =zh_lorem_name
+                h5.enname =zh_lorem_name
+              == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
+/ .share-to-tooltip
+/   | 分享到 Share To...
+/   ul
+/     li
+/       a href="javascript:;"
+/         img src="images/share2fb.png" alt="share to facebook"
+/     li
+/       a href="javascript:;" 
+/         img src="images/share2email.png" alt="share to E-mail"
