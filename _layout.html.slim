@@ -71,12 +71,10 @@ html
                 button.search-btn type="submit" 搜尋
       == yield
       == render :partial => "partials/footer"
-      a.show-modal href="javascript:;"  Show moda
-      
-      .modal-background
-      == render :partial => "partials/fb_plugin_sdk"
-      script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
-      script src="js/libs/jquery.fancydropdown.js"
-      script src="js/script.js"
-      javascript:
-        $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();
+    .modal-background
+    == render :partial => "partials/fb_plugin_sdk"
+    script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"
+    script src="js/libs/jquery.fancydropdown.js"
+    script src="js/script.js"
+    javascript:
+      $('#Menu1').add($("#Menu2")).add($("#Menu3")).fancyDropdown();
