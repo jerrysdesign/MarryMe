@@ -1054,3 +1054,6 @@ ul.tabs {
   height: 100%;
   @include box-sizing (border-box);
 }
+.avgrund-active {
+  @include filter (blur(2px));
+}

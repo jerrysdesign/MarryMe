@@ -96,14 +96,19 @@ $(function(){
 $(function(){
   $( '.show-modal' ).on( 'click', function(e) {
     $( '.modal' ).fadeIn();
-    $( '.modal-background' ).fadeTo( 500, .5 );
+    $( '.modal-background' ).fadeTo( 300, .5 );
+    $( '.wrapper').addClass('avgrund-active');
     e.preventDefault();
   });
   $( '.modal-close' ).on( 'click', function(e) {
     $( '.modal, .modal-background' ).fadeOut();
+    $( '.wrapper').removeClass('avgrund-active');
     e.preventDefault();
   });
   $(document).keyup(function(e) {
-    if (e.keyCode == 27) {$( '.modal, .modal-background' ).fadeOut();}   // esc
+    if (e.keyCode == 27) {
+      $( '.modal, .modal-background' ).fadeOut();
+      $( '.wrapper').removeClass('avgrund-active');
+    }   // esc
   });
 });

@@ -1602,3 +1602,9 @@ ul.tabs li.active {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+
+.avgrund-active {
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(2px);
+  filter: blur(2px);
+}
