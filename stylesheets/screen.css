@@ -1550,9 +1550,6 @@ ul.tabs li.active {
   position: fixed;
   top: 50%;
   left: 50%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
@@ -1562,10 +1559,9 @@ ul.tabs li.active {
 }
 .modal.styled {
   width: 820px;
-  max-height: 620px;
-  overflow: auto;
-  background: #fff;
   padding: 20px;
+  max-height: 620px;
+  background: #fff;
   border: 1px solid #222;
   border-top: 10px solid #86e4c0;
   -webkit-border-radius: 3px;
@@ -1588,6 +1584,21 @@ ul.tabs li.active {
   float: right;
   margin: -20px;
 }
+.modal .colum-l {
+  width: 480px;
+  float: left;
+}
+.modal .colum-l h3, .modal .colum-l p {
+  margin-left: 60px;
+}
+.modal .colum-l h3 {
+  font-size: 18px;
+  color: #333;
+}
+.modal .colum-r {
+  width: 300px;
+  float: right;
+}
 
 .modal-background {
   display: none;
@@ -1598,13 +1609,76 @@ ul.tabs li.active {
   left: 0;
   width: 100%;
   height: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .avgrund-active {
   -webkit-filter: blur(2px);
   -moz-filter: blur(2px);
   filter: blur(2px);
+}
+
+.slider-photo {
+  width: 480px;
+  height: 320px;
+  text-align: center;
+  background: black;
+  margin-bottom: 10px;
+}
+.slider-photo:before, .slider-photo:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.slider-photo:after {
+  clear: both;
+}
+.slider-photo img {
+  max-height: 320px;
+  margin: 0 auto;
+}
+
+.slider-sub {
+  position: relative;
+  width: 480px;
+}
+.slider-sub:before, .slider-sub:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.slider-sub:after {
+  clear: both;
+}
+.slider-sub .slider-sub-inner {
+  overflow-x: hidden;
+}
+.slider-sub .slider-sub-inner .scroller {
+  position: absolute;
+  top: 0;
+  width: 40px;
+  height: 72px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  background-position: center;
+}
+.slider-sub .slider-sub-inner .left {
+  left: 0;
+  background-image: url(../images/slider-sub-l.png);
+}
+.slider-sub .slider-sub-inner .right {
+  right: 0;
+  background-image: url(../images/slider-sub-r.png);
+}
+.slider-sub .slider-sub-inner .mediabannerlist .mag_cover {
+  float: left;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+.slider-sub .slider-sub-inner .mediabannerlist li + li {
+  margin-left: 10px;
 }

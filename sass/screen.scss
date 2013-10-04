@@ -1020,15 +1020,14 @@ ul.tabs {
   position: fixed;
   top: 50%;
   left: 50%;
-  @include box-sizing (border-box);
+  // @include box-sizing (content-box);
   @include transform (translate(-50%, -50%));
   z-index: 9999;
   &.styled {
     width: 820px;
-    max-height: 620px;
-    overflow: auto;
-    background: #fff;
     padding: 20px;
+    max-height: 620px;
+    background: #fff;
     border: 1px solid #222;
     border-top: 10px solid $PrimaryColor;
     @include border-radius (3px);
@@ -1042,6 +1041,29 @@ ul.tabs {
     float: right;
     margin: -20px;
   }
+  // .inner {
+  //   width: 820px;
+  //   max-height: 620px;
+  //   padding: 20px;
+  //   overflow-y: auto;
+  // }
+  .row-t {}
+  .row-d {}
+  .colum-l {
+    width: 480px;
+    float: left;
+    h3 , p {
+      margin-left: 60px;
+    }
+    h3 {
+      font-size: 18px;
+      color: #333;
+    }
+  }
+  .colum-r {
+    width: 300px;
+    float: right;
+  }
 }
 .modal-background {
   display: none;
@@ -1052,8 +1074,54 @@ ul.tabs {
   left: 0;
   width: 100%;
   height: 100%;
-  @include box-sizing (border-box);
 }
 .avgrund-active {
   @include filter (blur(2px));
+}
+
+
+.slider-photo {
+  @include wh(480,320);
+  text-align: center;
+  @include clearfix;
+  background: black;
+  margin-bottom: 10px;
+  img {
+    max-height: 320px;
+    margin: 0 auto;
+  }
+}
+.slider-sub {
+  position: relative;
+  width: 480px;
+  @include clearfix;
+  .slider-sub-inner {
+    overflow-x: hidden;
+    .scroller {
+      position: absolute;
+      top: 0;
+      @include wh(40,72);
+      @include hide-text;
+      display: block;
+      background-position: center;
+    }
+    .left {
+      left: 0;
+      @include bg('slider-sub-l.png');
+    }
+    .right {
+      right: 0;
+      @include bg('slider-sub-r.png');
+    }
+    .mediabannerlist {
+      .mag_cover {
+        float: left;
+        @include wh(72,72);
+        overflow: hidden;
+      }
+      li+li {
+        margin-left: 10px;
+      }
+    }
+  }
 }

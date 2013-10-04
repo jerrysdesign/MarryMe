@@ -113,3 +113,20 @@ $(function(){
     }   // esc
   });
 });
+
+$(function(){
+
+  var bannerWidth = $('.mediabannerlist li').length * 100;
+  $('.mediabannerlist').width(bannerWidth);
+
+  $('.scroller.right').mouseenter(function(){
+    $('.slider-sub-inner').scrollTo(bannerWidth, 1200);
+  });
+  $('.scroller.left').mouseenter(function(){
+    $('.slider-sub-inner').scrollTo(0, 1200);
+  });
+  $('.scroller').mouseleave(function(){
+    $('.slider-sub-inner').stop();
+  });
+
+});
