@@ -10,14 +10,22 @@
         li
           == image_tag lorem_image("320x480"), :class => "show"
 
-  .slider-sub 
-    .slider-sub-inner
-      ul.mediabannerlist
-        -15.times do
-          li.mag_cover
-            a href="javascript:;" 
-              == image_tag lorem_image("100")
-      .scroller.left
-      .scroller.right
+    .slider-sub 
+      .slider-sub-inner
+        ul.mediabannerlist
+          -15.times do
+            li.mag_cover
+              a href="javascript:;" 
+                == image_tag lorem_image("100")
+        .scroller.left
+        .scroller.right
   
   .colum-r
+    == image_tag lorem_image("72x72"), :class => "avatar fl"
+    .type 婚禮攝影師
+    h4.name ==zh_lorem_name
+    h4.enname ==lorem_name
+    .counties 地區:北區
+
+    .description
+      p ==zh_lorem_paragraphs 10
