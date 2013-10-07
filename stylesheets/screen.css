@@ -872,7 +872,7 @@ ul.menu-stacked > li.active {
   -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
   -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.22);
-  background-image: url("../images/assets/sub-header.png");
+  background-image: url(../images/sub-header.png);
   font-size: 14px;
   line-height: 37px;
 }
