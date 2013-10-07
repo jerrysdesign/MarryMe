@@ -96,7 +96,7 @@ $(function(){
 $(function(){
   $( '.show-modal' ).on( 'click', function(e) {
     $( '.modal' ).fadeIn();
-    $( '.modal-background' ).fadeTo( 500, .5 );
+    $( '.modal-background' ).fadeTo( 300 , 1 );
     $( '.wrapper').addClass('avgrund-active');
     $('body').append($('.modal.styled'));
     e.preventDefault();
