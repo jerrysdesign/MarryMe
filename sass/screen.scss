@@ -1079,21 +1079,33 @@ ul.tabs {
   @include filter (blur(2px));
 }
 
-
 .slider-photo {
   @include wh(480,320);
-  text-align: center;
   @include clearfix;
   background: black;
   margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
   img {
     max-height: 320px;
     margin: 0 auto;
+  }
+  ul {
+  }
+  li {
+    width: 480px;
+    position: absolute;
+    text-align: center;
+    left: 100%;
+  }
+  .active {
+    left: 0;
   }
 }
 .slider-sub {
   position: relative;
   width: 480px;
+  clear: both;
   @include clearfix;
   .slider-sub-inner {
     overflow-x: hidden;

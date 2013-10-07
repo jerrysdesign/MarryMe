@@ -1620,9 +1620,10 @@ ul.tabs li.active {
 .slider-photo {
   width: 480px;
   height: 320px;
-  text-align: center;
   background: black;
   margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
 }
 .slider-photo:before, .slider-photo:after {
   content: "";
@@ -1637,10 +1638,20 @@ ul.tabs li.active {
   max-height: 320px;
   margin: 0 auto;
 }
+.slider-photo li {
+  width: 480px;
+  position: absolute;
+  text-align: center;
+  left: 100%;
+}
+.slider-photo .active {
+  left: 0;
+}
 
 .slider-sub {
   position: relative;
   width: 480px;
+  clear: both;
 }
 .slider-sub:before, .slider-sub:after {
   content: "";

@@ -4,17 +4,20 @@
     == image_tag lorem_image("50x50"), :class => "avatar fl"
     h3 ==zh_lorem_words 20
     p ==zh_lorem_paragraph
-    .slider-photo 
-    	== image_tag lorem_image("320x480"), :class => "show"
+    
+    ul.slider-photo 
+      -15.times do
+        li
+          == image_tag lorem_image("320x480"), :class => "show"
 
-	.slider-sub 
-	  .slider-sub-inner
-	    ul.mediabannerlist
-	    	-15.times do
-		      li.mag_cover
-		        a href="javascript:;" 
-		          == image_tag lorem_image("100")
-	    .scroller.left
-	    .scroller.right
+  .slider-sub 
+    .slider-sub-inner
+      ul.mediabannerlist
+        -15.times do
+          li.mag_cover
+            a href="javascript:;" 
+              == image_tag lorem_image("100")
+      .scroller.left
+      .scroller.right
   
   .colum-r
