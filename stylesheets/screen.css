@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Radley:400,400italic);
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -373,7 +374,31 @@ h6,
   height: 300px;
   z-index: 7;
   /*範例*/
-  background: url(../images/assets/Slideshow.png);
+  background: url(../images/assets/slideshow.png);
+}
+.banner.index {
+  height: 405px;
+}
+.banner > .slogn {
+  position: absolute;
+  left: 80px;
+  top: 35px;
+  margin: 0;
+  width: 280px;
+  text-align: center;
+}
+.banner > .slogn > span {
+  background-color: rgba(255, 255, 255, 0.3);
+  font-family: "Radley", serif;
+  font-style: italic;
+  font-size: 24px;
+  line-height: 40px;
+  text-transform: uppercase;
+  padding: 0 5px;
+}
+.banner > .slogn .slogn2 {
+  font-family: bodyFontFamily;
+  font-size: 12px;
 }
 
 .main {

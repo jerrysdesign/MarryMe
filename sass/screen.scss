@@ -112,7 +112,31 @@ h6,
   height: 300px;
   z-index: 7;
   /*範例*/
-  background: url(../images/assets/Slideshow.png);
+  background: url(../images/assets/slideshow.png);
+  &.index {
+    height: 405px;
+  }
+  > .slogn {
+    position: absolute;
+    left: 80px;
+    top: 35px;
+    margin: 0;
+    width: 280px;
+    text-align: center;
+    > span {
+      background-color: rgba(255,255,255,0.3);
+      font-family: $PrimaryFamily;
+      font-style: italic;
+      font-size: 24px;
+      line-height: 40px;
+      text-transform: uppercase;
+      padding: 0 5px;
+    }
+    .slogn2 {
+      font-family: bodyFontFamily;
+      font-size: 12px;
+    }
+  }
 }
 .main {
   @include clearfix;
