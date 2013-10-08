@@ -136,7 +136,6 @@ $(function(){
   $('.scroller').mouseleave(function(){
     $('.slider-sub-inner').stop();
   });
-
 });
 
 $(function($){
@@ -144,6 +143,7 @@ $(function($){
   var $slideNav = $('.slider-nav > div');
   var nextBtn = $('.slider-control .next');
   var prevBtn = $('.slider-control .prev');
+  $slideNav.eq(0).addClass("active");
   
   $slideNav.each(function(e){
     $(this).click(function(){
@@ -173,6 +173,6 @@ $(function($){
     setSlide(currentSlide);
   });
   
-  setSlide(1);
+  setSlide(0);
 
 });
