@@ -378,6 +378,7 @@ h6,
 }
 .banner.index {
   height: 405px;
+  background: none;
 }
 .banner > .slogn {
   position: absolute;
@@ -1723,7 +1724,17 @@ ul.tabs li.active {
 .slider-sub .slider-sub-inner {
   overflow-x: hidden;
 }
-.slider-sub .slider-sub-inner .scroller {
+.slider-sub .slider-sub-inner .mediabannerlist .mag_cover {
+  float: left;
+  width: 72px;
+  height: 72px;
+  overflow: hidden;
+}
+.slider-sub .slider-sub-inner .mediabannerlist li + li {
+  margin-left: 10px;
+}
+
+.scroller {
   position: absolute;
   top: 0;
   width: 40px;
@@ -1733,21 +1744,90 @@ ul.tabs li.active {
   overflow: hidden;
   display: block;
   background-position: center;
+  cursor: pointer;
 }
-.slider-sub .slider-sub-inner .left {
+.scroller.prev {
   left: 0;
   background-image: url(../images/slider-sub-l.png);
 }
-.slider-sub .slider-sub-inner .right {
+.scroller.next {
   right: 0;
   background-image: url(../images/slider-sub-r.png);
 }
-.slider-sub .slider-sub-inner .mediabannerlist .mag_cover {
+
+/*banner slider*/
+.banner .slider-nav {
+  position: absolute;
+  right: 20px;
+  bottom: 60px;
+}
+.banner .slider-nav > div {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  cursor: pointer;
+  background: #fff;
+  margin: 2px;
+  z-index: 19;
+}
+.banner .slider-nav .active {
+  background: #86e4c0;
+}
+.banner .viewport {
+  width: 980px;
+  height: 405px;
+  overflow: hidden;
+  z-index: 1;
+}
+.banner .slides {
+  position: relative;
+  width: inherit;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+.banner .slides > div {
+  position: absolute;
+  width: 100%;
   float: left;
-  width: 72px;
-  height: 72px;
+  min-height: 405px;
   overflow: hidden;
 }
-.slider-sub .slider-sub-inner .mediabannerlist li + li {
-  margin-left: 10px;
+.banner .slide:nth-child(1) {
+  margin-left: 0%;
+}
+.banner .slide:nth-child(2) {
+  margin-left: 100%;
+}
+.banner .slide:nth-child(3) {
+  margin-left: 200%;
+}
+.banner .slide:nth-child(4) {
+  margin-left: 300%;
+}
+.banner .slide:nth-child(5) {
+  margin-left: 400%;
+}
+.banner .slide {
+  margin-left: 100%;
+}
+.banner .slide {
+  margin-left: 200%;
+}
+.banner .slide {
+  margin-left: 300%;
+}
+.banner .slider-control {
+  position: absolute;
+  width: 980px;
+  height: 70px;
+  z-index: 18;
+  top: 150px;
+  left: 0;
 }

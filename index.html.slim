@@ -40,6 +40,26 @@ html
           .logo-circle-inner
             .logo
       .banner.index
+        .viewport
+          .slides
+            .slide
+              == image_tag lorem_image("980x405")
+            .slide
+              == image_tag lorem_image("980x405")
+            .slide
+              == image_tag lorem_image("980x405")
+            .slide
+              == image_tag lorem_image("980x405")
+        .slider-nav
+          .goto-1 data-slide="0"
+          .goto-2 data-slide="1"
+          .goto-3 data-slide="2"
+          .goto-3 data-slide="3"
+        .slider-control
+          .scroller.prev
+            | Previous
+          .scroller.next
+            | Next
         .slogn
           span
             | Here

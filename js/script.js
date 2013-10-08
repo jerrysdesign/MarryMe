@@ -138,3 +138,41 @@ $(function(){
   });
 
 });
+
+$(function($){
+  var $slides = $('.viewport > .slides');
+  var $slideNav = $('.slider-nav > div');
+  var nextBtn = $('.slider-control .next');
+  var prevBtn = $('.slider-control .prev');
+  
+  $slideNav.each(function(e){
+    $(this).click(function(){
+      $slideNav.removeClass('active');
+      $(this).addClass('active');
+      setSlide($(this).attr('data-slide'));
+    });
+  });
+  
+  var currentSlide = 0,
+      totalSlides = $slides.children().size();
+    
+  var setSlide = function(slide){
+    var shift = slide * 100;
+    currentSlide = slide;
+    $slides.css({'left': '-'+shift+'%'});
+  };
+  
+  nextBtn.click(function(){
+    currentSlide = (currentSlide + 1) % totalSlides;
+    setSlide(currentSlide);
+  });
+
+  prevBtn.click(function(){
+    currentSlide -= 1;
+    currentSlide = currentSlide < 0 ? totalSlides-1: currentSlide;
+    setSlide(currentSlide);
+  });
+  
+  setSlide(1);
+
+});

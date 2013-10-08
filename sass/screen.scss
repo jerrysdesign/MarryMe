@@ -115,6 +115,7 @@ h6,
   background: url(../images/assets/slideshow.png);
   &.index {
     height: 405px;
+    background: none;
   }
   > .slogn {
     position: absolute;
@@ -1163,22 +1164,6 @@ ul.tabs {
   @include clearfix;
   .slider-sub-inner {
     overflow-x: hidden;
-    .scroller {
-      position: absolute;
-      top: 0;
-      @include wh(40,72);
-      @include hide-text;
-      display: block;
-      background-position: center;
-    }
-    .left {
-      left: 0;
-      @include bg('slider-sub-l.png');
-    }
-    .right {
-      right: 0;
-      @include bg('slider-sub-r.png');
-    }
     .mediabannerlist {
       .mag_cover {
         float: left;
@@ -1189,5 +1174,85 @@ ul.tabs {
         margin-left: 10px;
       }
     }
+  }
+}
+.scroller {
+  position: absolute;
+  top: 0;
+  @include wh(40,72);
+  @include hide-text;
+  display: block;
+  background-position: center;
+  cursor: pointer;
+  &.prev {
+    left: 0;
+    @include bg('slider-sub-l.png');
+  }
+  &.next {
+    right: 0;
+    @include bg('slider-sub-r.png');
+  }
+}
+/*banner slider*/
+.banner {
+  .slider-nav {
+    position: absolute;
+    right: 20px;
+    bottom: 60px;
+    > div {
+      @include circle;
+      @include wh(10,10);
+      display: inline-block;
+      cursor: pointer;
+      background: #fff;
+      margin: 2px;
+      z-index: 19;
+    }
+    .active {
+      background: $PrimaryColor;
+    }
+  }
+  .viewport {
+    width: 980px;
+    height: 405px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .slides {
+    position: relative;
+    width: inherit;
+    @include transition (all 0.5s ease-in-out);
+    > div {
+      position: absolute;
+      width: 100%;
+      float: left;
+      min-height: 405px;
+      overflow: hidden;
+    }
+  }
+  .slide {
+    @for $i from 0 through 4 {
+      &:nth-child(#{$i+1}) {
+        margin-left: 100%*$i; 
+      }
+    }
+  }
+  
+  .slide {
+    margin-left: 100%; 
+  }
+  .slide {
+    margin-left: 200%; 
+  }
+  .slide {
+    margin-left: 300%;
+  }
+  .slider-control {
+    position: absolute;
+    width: 980px;
+    height: 70px;
+    z-index: 18;
+    top: 150px;
+    left: 0;
   }
 }
