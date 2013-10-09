@@ -1,0 +1,45 @@
+.previous.main
+  ol.breadcrumb
+    li
+      a href="javascript:;" Home
+    li.active
+      a href="javascript:;" 給我造型師
+
+  .container_12
+    .two-column 
+      .sub
+        h3.sub-header 個人資訊
+        .pnl.edit
+          == image_tag lorem_image("160x160"), :class => "avatar user"
+          .name =zh_lorem_name
+          ul.user-menu
+            li
+              a href="javascript:;"
+                | 我的信箱
+                span.badges 3
+            li 
+              a href="javascript:;"
+                | 可被預約時間
+                span.lasttime 2天前
+            li 
+              a href="javascript:;"
+                | 個人資料
+                span 80%
+            li 
+              a href="javascript:;"
+                | 服務基本資料
+                span 60%
+            li 
+              a href="javascript:;"
+                | 我的文章
+                span 2
+            li 
+              a href="javascript:;"
+                | 作品集
+                span 15
+            li 
+              a href="javascript:;" 活動專區
+            li 
+              a href="javascript:;" 社群分享記錄
+
+      .main-content

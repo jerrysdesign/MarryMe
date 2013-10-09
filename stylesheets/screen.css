@@ -1855,3 +1855,68 @@ ul.tabs li.active {
   top: 150px;
   left: 0;
 }
+
+.user {
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.name {
+  font-size: 18px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-menu > li {
+  padding: 5px;
+  padding-left: 15px;
+  background-image: url(../images/sub-menu-liststyle.png);
+  background-position: left 13px;
+  background-repeat: no-repeat;
+  clear: both;
+  overflow: hidden;
+  font-weight: bold;
+}
+.user-menu > li > a {
+  font-size: 14px;
+  color: #333;
+}
+.user-menu > li span {
+  float: right;
+  font-weight: normal;
+}
+.user-menu > li:hover > a {
+  color: #86e4c0;
+}
+.user-menu > li:hover:after {
+  content: url("../images/submenu-hoverarr.png");
+  padding-left: 5px;
+}
+.user-menu li + li {
+  border-top: solid 1px #f2f2f2;
+}
+.user-menu .badges {
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  color: #fff;
+  background-color: #333;
+  display: inline-block;
+  min-width: 12px;
+  padding: 5px 5px;
+  font-size: 12px;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  font-weight: bold;
+}
+.user-menu .lasttime {
+  font-size: 10px;
+}
+.user-menu .lasttime:before {
+  content: "最近更新時間";
+  padding-right: 5px;
+}
