@@ -545,7 +545,7 @@ h6,
   margin: 4px;
 }
 
-.login, .join {
+.login, .user-assets {
   position: absolute;
   width: 78px;
   height: 78px;
@@ -554,21 +554,45 @@ h6,
   -ms-border-radius: 999px;
   -o-border-radius: 999px;
   border-radius: 999px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   right: 20px;
   top: 25px;
-  padding-top: 40px;
   background-image: url(../images/login-icon.png);
   background-repeat: no-repeat;
   background-position: center 12px;
   background-color: #a9a9a9;
   text-align: center;
   color: #fff;
+}
+.login .inner, .user-assets .inner {
+  margin-top: 40px;
+}
+.login a, .user-assets a {
+  color: #fff;
+}
+
+.user-assets {
+  background-color: #86e4c0;
+  border: 4px solid #86e4c0;
+  width: 116px;
+  height: 116px;
+}
+.user-assets .inner {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-.login a, .join a {
-  color: #fff;
+  border: 2px  solid #fff;
+  width: 108px;
+  height: 108px;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+  border-radius: 999px;
+  margin-top: 0;
+  padding: 40px 10px 0;
 }
 
 .page-heaer {

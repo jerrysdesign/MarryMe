@@ -76,12 +76,8 @@ html
             br
           span.slogn2
             | 在這裡  沒有比價  只有最適合你的  新祕＆婚攝
-        .login
-          a href='javasript:;' 登入
-          |   
-          | / 
-          |  
-          a href='javasript:;' 註冊
+        == render :partial => "partials/user_assets" , :locals => {:f => "login"}
+        
         form.search-bar
           .ul
             .li

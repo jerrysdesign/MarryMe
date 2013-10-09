@@ -45,12 +45,7 @@ html
           / h1
           /   | 結婚這檔事
           /   span about marry
-        .login
-          a href='javasript:;' 登入
-          |   
-          | / 
-          |  
-          a href='javasript:;' 註冊
+        == render :partial => "partials/user_assets" , :locals => {:f => "notlogin"}
         form.search-bar
           .ul
             .li
