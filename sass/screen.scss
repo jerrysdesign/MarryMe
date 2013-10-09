@@ -1334,3 +1334,13 @@ ul.tabs {
     }
   } 
 }
+.main-content .page-title {
+  margin-top: 10px;
+}
+.w340 {
+  width: 340px;
+  display: inline-block;
+}
+.w340 + .w340 {
+  margin-left: 20px;
+}
