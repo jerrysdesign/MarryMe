@@ -336,16 +336,12 @@ h6,
 .img-circle {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
   border-radius: 50%;
 }
 
 .circle {
   -webkit-border-radius: 100%;
   -moz-border-radius: 100%;
-  -ms-border-radius: 100%;
-  -o-border-radius: 100%;
   border-radius: 100%;
 }
 
@@ -517,8 +513,6 @@ h6,
 .logo-circle {
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   position: absolute;
   width: 170px;
@@ -533,8 +527,6 @@ h6,
   background-color: #fff;
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   position: absolute;
   width: 170px;
@@ -551,8 +543,6 @@ h6,
   height: 78px;
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -583,13 +573,11 @@ h6,
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  border: 2px  solid #fff;
+  border: 2px solid #fff;
   width: 108px;
   height: 108px;
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   margin-top: 0;
   padding: 40px 10px 0;
@@ -625,8 +613,6 @@ h6,
   border-bottom: 2px solid #5e9f86;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 2px 1px rgba(71, 73, 60, 0.3);
   -moz-box-shadow: 0px 2px 1px rgba(71, 73, 60, 0.3);
@@ -663,8 +649,6 @@ h6,
   box-shadow: 0 2px 1px rgba(71, 73, 60, 0.25);
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
   border-radius: 6px;
   margin-top: 7px;
   overflow: hidden;
@@ -796,13 +780,20 @@ ul.menu-stacked > li.active {
   background-color: white;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  -ms-border-radius: 2px;
-  -o-border-radius: 2px;
   border-radius: 2px;
   -webkit-box-shadow: 1px 2px 5px 0px #cccccc;
   -moz-box-shadow: 1px 2px 5px 0px #cccccc;
   box-shadow: 1px 2px 5px 0px #cccccc;
   margin-bottom: 10px;
+}
+.well:before, .well:after {
+  content: "";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.well:after {
+  clear: both;
 }
 .well.lb {
   border-color: #86e4c0;
@@ -1094,8 +1085,6 @@ ul.menu-stacked > li.active {
   padding: 26px;
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   background-color: #fff;
   text-align: center;
@@ -1469,8 +1458,6 @@ ul.menu-stacked > li.active {
   font-weight: bold;
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   background-color: #2e3641;
 }
@@ -1620,8 +1607,6 @@ ul.tabs li.active {
   border-top: 10px solid #86e4c0;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
   border-radius: 3px;
   -webkit-box-shadow: 0 3px 14px -4px black;
   -moz-box-shadow: 0 3px 14px -4px black;
@@ -1791,8 +1776,6 @@ ul.tabs li.active {
 .banner .slider-nav > div {
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   width: 10px;
   height: 10px;
@@ -1863,7 +1846,6 @@ ul.tabs li.active {
   border: 0;
   background-color: #86e4c0;
   box-shadow: 0px 3px 0px #e5e5e5;
-  position: absolute;
   padding: 5px 8px;
   color: #fff;
   font-size: 14px;
@@ -1911,6 +1893,12 @@ ul.tabs li.active {
   content: none;
 }
 
+.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
 .user {
   margin: 10px 20px;
   text-align: center;
@@ -1953,8 +1941,6 @@ ul.tabs li.active {
 .user-menu .badges {
   -webkit-border-radius: 999px;
   -moz-border-radius: 999px;
-  -ms-border-radius: 999px;
-  -o-border-radius: 999px;
   border-radius: 999px;
   color: #fff;
   background-color: #333;
