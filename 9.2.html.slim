@@ -80,7 +80,7 @@
               label.control-label 密碼
               .controls
                 input type="password" placeholder="Enter Text..."
-                button type="button" 修改密碼
+                button.btn type="button" 修改密碼
             h4 個人資料
             .control-group
               label.control-label 帳號
@@ -101,7 +101,15 @@
             .control-group
               label.control-label 性別
               .controls
-                
+                label.radio.inline
+                  | 男
+                  input type="radio" value=""
+                label.radio.inline
+                  | 女
+                  input type="radio" value=""
+                label.radio.inline
+                  | 隱私
+                  input type="radio" value="" checked="checked" 
             .control-group
               label.control-label  * 手機號碼
               .controls
@@ -126,6 +134,7 @@
                 select
                   option LINE
                 input type="text"
+                button.btn +
             .control-group
               label.control-label  * 個人FB
               .controls
@@ -153,6 +162,6 @@
               label.control-label 其他
               .controls 
                 == image_tag lorem_image("506x143")
-                button Upload 上傳封面照片
-                button 畫面預覽
-            button type="submit" 確認修改
+                button.btn Upload 上傳封面照片
+                button.btn 畫面預覽
+            button.btn type="submit" 確認修改

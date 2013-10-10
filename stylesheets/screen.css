@@ -1859,6 +1859,21 @@ ul.tabs li.active {
   left: 0;
 }
 
+.btn {
+  border: 0;
+  background-color: #86e4c0;
+  box-shadow: 0px 3px 0px #e5e5e5;
+  position: absolute;
+  padding: 5px 8px;
+  color: #fff;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.btn + .btn {
+  margin-left: 10px;
+}
+
 .editprofile-form h4 {
   font-size: 14px;
   font-weight: bold;
@@ -1878,6 +1893,9 @@ ul.tabs li.active {
   content: url(../images/sub-menu-liststyle.png);
   padding-right: 10px;
 }
+.editprofile-form label + label {
+  margin-left: 10px;
+}
 .editprofile-form input {
   padding: 3px;
   min-width: 220px;
@@ -1888,6 +1906,9 @@ ul.tabs li.active {
 }
 .control-group .controls {
   margin-left: 15px;
+}
+.control-group .controls label:before {
+  content: none;
 }
 
 .user {
