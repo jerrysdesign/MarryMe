@@ -461,6 +461,9 @@ ul.menu-stacked {
     border-top-width: 5px;
     border-top-style: solid;
   }
+  &.pd21 {
+    padding: 20px 10px;
+  }
 }
 /*頁面區塊標題*/
 .page-title {
@@ -1272,6 +1275,38 @@ ul.tabs {
 }
 
 //後台//
+.editprofile-form {
+  h4 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    padding-right: 10px;
+    color: $PrimaryColor;
+    &:after {
+      content: url(../images/h4bb.png);
+    }
+  }
+  label {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    &:before {
+      content:url(../images/sub-menu-liststyle.png);
+      padding-right: 10px;
+    }
+  }
+  input {
+    padding: 3px;
+    min-width: 220px;
+  }
+}
+.control-group {
+  padding: 10px;
+  .controls {
+    margin-left: 15px;
+  }
+}
+//9.2//
 .user {
   margin: 10px 20px;
   text-align: center;
@@ -1343,4 +1378,66 @@ ul.tabs {
 }
 .w340 + .w340 {
   margin-left: 20px;
+}
+.space {
+  border: 1px solid transparent;
+  border-top-color: #d6d6d6 ;
+  border-bottom-color: #fff;
+  margin: 10px 10px 20px 10px;
+}
+.alerts {
+  padding: 10px 20px 10px 70px;
+  background-color: #000;
+  @include bg('alerts-bg.png');
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  min-height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+  > .progress {
+    float: right;
+  }
+}
+.progress {
+  font-size: 12px;
+  .progress-ber {
+    @include wh(100,10);
+    background: #c5c5c5;
+    display: inline-block;
+  }
+  &:before {
+    content: '完整度';
+    padding-right: 5px;
+    display: inline-block;
+  }
+  &:after {
+    content: '80%';
+    padding-left: 5px;
+    display: inline-block;
+  }
+}
+
+//9.3//
+.useredit-tab {
+  overflow: hidden;
+  > li {
+    display: block;
+    padding: 0 20px;
+    float: left;
+    font-size: 14px;
+  }
+  li + li {
+    border-left: solid 1px #f5f5f5; 
+  }
+  li > a {
+    display: block;
+    line-height: 18px;
+    color: #000;
+  }
+  .active {
+    color: $PrimaryColor;
+  }
 }

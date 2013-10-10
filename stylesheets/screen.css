@@ -814,6 +814,9 @@ ul.menu-stacked > li.active {
   border-top-width: 5px;
   border-top-style: solid;
 }
+.well.pd21 {
+  padding: 20px 10px;
+}
 
 /*頁面區塊標題*/
 .page-title {
@@ -1856,6 +1859,37 @@ ul.tabs li.active {
   left: 0;
 }
 
+.editprofile-form h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 10px 0;
+  padding-right: 10px;
+  color: #86e4c0;
+}
+.editprofile-form h4:after {
+  content: url(../images/h4bb.png);
+}
+.editprofile-form label {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+.editprofile-form label:before {
+  content: url(../images/sub-menu-liststyle.png);
+  padding-right: 10px;
+}
+.editprofile-form input {
+  padding: 3px;
+  min-width: 220px;
+}
+
+.control-group {
+  padding: 10px;
+}
+.control-group .controls {
+  margin-left: 15px;
+}
+
 .user {
   margin: 10px 20px;
   text-align: center;
@@ -1932,4 +1966,69 @@ ul.tabs li.active {
 
 .w340 + .w340 {
   margin-left: 20px;
+}
+
+.space {
+  border: 1px solid transparent;
+  border-top-color: #d6d6d6;
+  border-bottom-color: #fff;
+  margin: 10px 10px 20px 10px;
+}
+
+.alerts {
+  padding: 10px 20px 10px 70px;
+  background-color: #000;
+  background-image: url(../images/alerts-bg.png);
+  background-position: 20px center;
+  background-repeat: no-repeat;
+  min-height: 32px;
+  line-height: 32px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  overflow: hidden;
+}
+.alerts > .progress {
+  float: right;
+}
+
+.progress {
+  font-size: 12px;
+}
+.progress .progress-ber {
+  width: 100px;
+  height: 10px;
+  background: #c5c5c5;
+  display: inline-block;
+}
+.progress:before {
+  content: '完整度';
+  padding-right: 5px;
+  display: inline-block;
+}
+.progress:after {
+  content: '80%';
+  padding-left: 5px;
+  display: inline-block;
+}
+
+.useredit-tab {
+  overflow: hidden;
+}
+.useredit-tab > li {
+  display: block;
+  padding: 0 20px;
+  float: left;
+  font-size: 14px;
+}
+.useredit-tab li + li {
+  border-left: solid 1px #f5f5f5;
+}
+.useredit-tab li > a {
+  display: block;
+  line-height: 18px;
+  color: #000;
+}
+.useredit-tab .active {
+  color: #86e4c0;
 }
