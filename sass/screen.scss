@@ -1425,6 +1425,9 @@ ul.tabs {
     float: right;
   }
 }
+.alerts + .well {
+  margin-top: 10px;
+}
 .progress {
   font-size: 12px;
   .progress-ber {
