@@ -25,7 +25,7 @@
               a href="javascript:;"
                 | 個人資料
                 span 80%
-            li 
+            li.active
               a href="javascript:;"
                 | 服務基本資料
                 span 60%
@@ -77,9 +77,38 @@
               == link_to("服務地區", "javascript:;")
             li
               == link_to("服務項目", "javascript:;", :class => "active")   
+        | 請詳細列出服務項目的計價方式（原價可不填）
         .well.pd21
           form.form-horizonta 
-            textarea class="form-control" rows="3"
+            ul.project-price
+              li
+                ul.header-title
+                  li 編號
+                  li 項目名稱
+                  li 時間
+                  li 原價
+                  li 優惠價
+              -2.times do
+                li
+                  .toprow
+                    .id
+                      | 1
+                    .projectname
+                      input type="text"
+                    .time
+                      input type="text"
+                      | /小時
+                    .price
+                      input type="text"
+                    .sale
+                      input type="text"
+                  .clearfix
+                  .note
+                    textarea
             .clearfix
-            button.btn type="submit" 確認修改
+            button.btn type="submit" style="margin-left:80px;margin-top: 10px;"+新增地區
+            .clearfix
+            .ps
+              | 1. 若因服務當日時間較早（需在6:30之前抵達開始化妝者）而須臾前一晚先到台中以外地區住宿，則交通廢除一般交通費外需另加收1000元（以男方抵達/儀式開始前3小時為化妝的開始時間）
+            button.btn.fr type="submit" 確認修改
             

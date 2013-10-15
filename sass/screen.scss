@@ -465,6 +465,9 @@ ul.menu-stacked {
   &.pd21 {
     padding: 20px 10px;
   }
+  &.pd01 {
+    padding: 0px 10px;
+  }
 }
 /*頁面區塊標題*/
 .page-title {
@@ -1358,7 +1361,7 @@ ul.tabs {
       float: right;
       font-weight: normal;
     }
-    &:hover {
+    &:hover , &.active{
       > a {
         color: $PrimaryColor;
       }
@@ -1466,5 +1469,78 @@ ul.tabs {
   }
   .active {
     color: $PrimaryColor;
+  }
+}
+//9.3.2//
+.header-title , .toprow {
+  width: 700px;
+  margin: -20px -10px;
+  > li , div {
+    padding: 5px 10px;
+    display: inline-block;
+    background-color: #000;
+    color: $PrimaryColor;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    &:nth-child(1) {width: 60px;}
+    &:nth-child(2) {width: 280px;}
+    &:nth-child(3) {width: 80px;}
+    &:nth-child(4) {width: 90px;}
+    &:nth-child(5) {width: 90px;}
+  }
+}
+.toprow {
+  overflow: hidden;
+  vertical-align: top;
+  margin: 0 -10px;
+  clear: both;
+  > div {
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    &:nth-child(1) {width: 60px;
+    }
+    &:nth-child(2) {width: 280px;
+      input { width:280px;}}
+    &:nth-child(3) {width: 80px;
+      input { width:25px;}}
+    &:nth-child(4) {width: 90px;
+      input { width:80px;}}
+    &:nth-child(5) {width: 90px;
+      input { width:80px;}}
+  }
+}
+.note > textarea {
+  margin-left: 80px;
+  width: 595px;
+}
+.project-price {
+  > li:nth-child(2) {
+    margin-top: 10px;
+  }
+  > li + li {
+    border-bottom: 1px solid #f3f3f3;
+    padding: 10px 0;
+  }
+}
+.ps {
+  width: 430px;
+  padding: 20px;
+}              
+//9.5//
+.ed-title {
+  font-style: 18px;
+  font-weight: bold;
+  color: $PrimaryColor;
+  display: inline-block;
+  margin-right: 20px;
+}
+.portfolio-tx {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 14px;
+  a {
+    padding: 0 8px;
   }
 }
