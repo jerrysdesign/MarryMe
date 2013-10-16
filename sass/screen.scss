@@ -1315,7 +1315,7 @@ ul.tabs {
       content: url(../images/h4bb.png);
     }
   }
-  label {
+  label , .control-label {
     font-size: 14px;
     color: #333;
     font-weight: bold;
@@ -1731,4 +1731,8 @@ ul.tabs {
 }
 img.random {
   vertical-align: top;
+}
+//reg-success//
+.panel-heading .heading-title {
+  overflow: hidden;
 }

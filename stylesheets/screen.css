@@ -1912,12 +1912,12 @@ ul.tabs {
   .editprofile-form h4:after, .editalbum-form h4:after, .login-form h4:after {
     content: url(../images/h4bb.png); }
 /* line 1318, ../sass/screen.scss */
-.editprofile-form label, .editalbum-form label, .login-form label {
+.editprofile-form label, .editprofile-form .control-label, .editalbum-form label, .editalbum-form .control-label, .login-form label, .login-form .control-label {
   font-size: 14px;
   color: #333;
   font-weight: bold; }
   /* line 1322, ../sass/screen.scss */
-  .editprofile-form label:before, .editalbum-form label:before, .login-form label:before {
+  .editprofile-form label:before, .editprofile-form .control-label:before, .editalbum-form label:before, .editalbum-form .control-label:before, .login-form label:before, .login-form .control-label:before {
     content: url(../images/sub-menu-liststyle.png);
     padding-right: 10px; }
 /* line 1327, ../sass/screen.scss */
@@ -2415,3 +2415,7 @@ ul.tabs {
 /* line 1732, ../sass/screen.scss */
 img.random {
   vertical-align: top; }
+
+/* line 1736, ../sass/screen.scss */
+.panel-heading .heading-title {
+  overflow: hidden; }
