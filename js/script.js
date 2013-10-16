@@ -101,6 +101,20 @@ $(function(){
     $('body').append($('.modal.styled'));
     e.preventDefault();
   });
+  $( '#show-login-modal' ).on( 'click', function(e) {
+    $( '#login-modal' ).fadeIn();
+    $( '.modal-background' ).fadeTo( 300 , 1 );
+    $( '.wrapper').addClass('avgrund-active');
+    $('body').append($('.modal.styled'));
+    e.preventDefault();
+  });
+  $( '#show-register-modal' ).on( 'click', function(e) {
+    $( '#register-modal' ).fadeIn();
+    $( '.modal-background' ).fadeTo( 300 , 1 );
+    $( '.wrapper').addClass('avgrund-active');
+    $('body').append($('.modal.styled'));
+    e.preventDefault();
+  });
   $( '.modal-close' ).on( 'click', function(e) {
     $( '.modal, .modal-background' ).fadeOut();
     $( '.wrapper').removeClass('avgrund-active');
