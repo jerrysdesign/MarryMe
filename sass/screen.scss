@@ -1085,10 +1085,13 @@ ul.tabs {
     padding: 20px;
     max-height: 620px;
   }
-   &.login-modal {
+  &.login-modal {
     width: 620px;
     padding: 20px;
-    max-height: 620px;
+  }
+  &.reg-modal {
+    width: 380px;
+    padding: 20px;
   }
   .modal-close {
     @include wh(38,32);
@@ -1714,4 +1717,18 @@ ul.tabs {
   @include clearfix;
   padding: 20px 10px;
   color: inherit;
+}
+//Reg//
+.reg-modal > img.logo {
+  margin-left: 130px;
+  margin-top: 0;
+}
+.reg-modal {
+  .control-group + .control-group {
+    padding-top: 5px;
+    padding-bottom: 0;
+  }
+}
+img.random {
+  vertical-align: top;
 }

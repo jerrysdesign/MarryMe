@@ -110,10 +110,10 @@ $(function(){
     e.preventDefault();
   });
   $( '#show-register-modal' ).on( 'click', function(e) {
-    $( '#register-modal' ).fadeIn();
+    $( '#reg-modal' ).fadeIn();
     $( '.modal-background' ).fadeTo( 300 , 1 );
     $( '.wrapper').addClass('avgrund-active');
-    $('body').append($('.modal.styled'));
+    $('body').append($('#reg-modal.modal.reg-modal'));
     e.preventDefault();
   });
   $( '.modal-close' ).on( 'click', function(e) {
