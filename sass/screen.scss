@@ -468,12 +468,12 @@ ul.menu-stacked {
     border-top-width: 5px;
     border-top-style: solid;
   }
-  &.pd21 {
-    padding: 20px 10px;
-  }
-  &.pd01 {
-    padding: 0px 10px;
-  }
+}
+.pd21 {
+  padding: 20px 10px;
+}
+.pd01 {
+  padding: 0px 10px;
 }
 /*頁面區塊標題*/
 .page-title {
@@ -1075,16 +1075,20 @@ ul.tabs {
   left: 50%;
   // @include box-sizing (content-box);
   @include transform (translate(-50%, -50%));
+  background: #fff;
+  border-top: 10px solid $PrimaryColor;
+  @include border-radius (3px);
+  @include box-shadow (0 3px 14px -4px black);
   z-index: 99;
   &.styled {
     width: 820px;
     padding: 20px;
     max-height: 620px;
-    background: #fff;
-    border: 1px solid #222;
-    border-top: 10px solid $PrimaryColor;
-    @include border-radius (3px);
-    @include box-shadow (0 3px 14px -4px black);
+  }
+   &.login-modal {
+    width: 620px;
+    padding: 20px;
+    max-height: 620px;
   }
   .modal-close {
     @include wh(38,32);
@@ -1297,7 +1301,7 @@ ul.tabs {
 .btn + .btn {
   margin-left: 10px;
 } 
-.editprofile-form , .editalbum-form {
+.editprofile-form , .editalbum-form , .login-form {
   h4 {
     font-size: 14px;
     font-weight: bold;
@@ -1681,3 +1685,33 @@ ul.tabs {
   top: 0;
 }
 
+//login modal//
+.login-modal.modal {
+  > img.logo {
+    margin-left: 250px;
+    margin-top: 0;
+  }
+  .control-group + .control-group {
+    padding-top: 0;
+  }
+}
+.panel {
+  margin: 0 auto;
+  background-color: #fff;
+  @include box-shadow(0 2px 5px rgba(0,0,0,.22));
+}
+.panel-heading {
+  padding: 5px 15px;
+  background-color: #86e4c0;
+  @include box-shadow(0 2px 5px rgba(0,0,0,.22));
+  .heading-title {
+    font-size: 18px;
+    color: #000;
+    text-align: left;
+  }
+}
+.panel-body {
+  @include clearfix;
+  padding: 20px 10px;
+  color: inherit;
+}

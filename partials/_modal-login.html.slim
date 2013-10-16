@@ -1,3 +1,41 @@
-#login-modal.modal.styled
+#login-modal.modal.login-modal
   a.modal-close href="javascript:;" close
-  | 登入
+  img.logo src="images/logo.png"
+  .panel
+    .panel-heading
+      h3.heading-title 新人/夥伴  登入
+    .panel-body
+      span 歡迎回來，請登入繼續享用我們提供的服務唷！
+      .clearfix
+      .left.fl style="width:50%"
+        form.login-form role="form"
+          h4 Marry Me 帳號登入
+          .control-group
+            label.control-label
+              | 帳號
+            .controls
+              input type="text" placeholder="Enter Text..."
+          .control-group
+            label.control-label
+              | 密碼
+            .controls
+              input type="text" placeholder="Enter Text..."
+          .control-group
+            .controls
+              label style="font-size:12px;color:#ccc;"
+                input type="checkbox" 記住我（公用電腦請勿勾選）
+              a href="javascript:;" 忘記密碼
+          button.btn.fr type="sumbit" Login
+      .right.fr style="width:50%"
+        .login-form
+          h4 社群帳號快速登入
+          .pd21
+            a href="javascript:;"
+              img src="images/signin_fb.png" alt="sign in with facebook"
+            a href="javascript:;"
+              img src="images/signin_gp.png" alt="sign in with google+"
+  div style="margin:20px 0; text-align:center"
+    span 若還未成為會員，歡迎您的加入！
+    .clearfix
+    button.btn type="button" 我要成為新人會員
+    button.btn type="button" 我要成為Marry Me 夥伴
