@@ -85,6 +85,12 @@ h6,
 %circle {
   @include border-radius (100%);
 }
+.inline-row {
+  @include clearfix;
+  > * {
+    display: inline-block;
+  }
+}
 // 新人推薦分享
 .grid_6 .grid_2 {
   &:first-child {
@@ -1542,5 +1548,93 @@ ul.tabs {
   font-size: 14px;
   a {
     padding: 0 8px;
+  }
+}
+.search {
+  border: none;
+  width: 200px;
+  height: 23px;
+  line-height: 23px;
+  @include border-radius(4px 0 0 4px);
+  @include box-shadow(inset 1px 2px 3px rgba(0,0,0,.2));
+  background-color: #fefefe;
+  margin-top: 0;
+}
+.seach-btn-b {
+  border: none;
+  width: 30px;
+  height: 25px;
+  @include border-radius(0 4px 4px 0);
+  @include box-shadow(0 2px 2px rgba(0,0,0,.2));
+  background-color: #000;
+  @include bg ('search.png');
+  background-position: center;
+  margin-top: 0;
+  background-repeat: no-repeat;
+}
+.sort {
+  > li {
+    display: inline-block;
+    padding: 0 10px;
+    > a {
+      padding-left: 20px;
+      color: #000;
+      display: block;
+
+    }
+  }
+  > li+li {
+    margin-left: 10px;
+    border-left: 1px solid #000;
+  }
+}
+.icon16 {
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.icon-star {
+  @include icon('star-icon-b.png');
+}
+.icon-eye {
+  @include icon('trending-icon-b.png');
+}
+.icon-heart {
+  @include icon('hart-icon-b.png');
+}
+.active {
+  .icon-star {
+    @include icon('star-icon-p.png');
+  }
+  .icon-eye {
+    @include icon('trending-icon-p.png');
+  }
+  .icon-heart {
+    @include icon('hart-icon-p.png');
+  }
+  .icon16 {
+    color: $PrimaryColor2;
+  }
+}
+.album-list > li {
+  h5 {
+    font-weight: bold;
+  }
+  display: inline-block;
+  width: 220px;
+  padding: 10px;
+  &:nth-child(3n+1) {
+    padding-left: 0;
+  }
+  &:nth-child(3n+3) {
+    padding-right: 0;
+  }
+  > .item2 {
+    background-color: #fff;
+    @include box-shadow(0 3px rgba(0,0,0,.05));
+    padding: 10px;
+    > .album {
+      display: block;
+      margin: -10px -10px 0 -10px;
+    }
   }
 }
