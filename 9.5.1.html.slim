@@ -1,0 +1,136 @@
+.previous.main
+  ol.breadcrumb
+    li
+      a href="javascript:;" Home
+    li.active
+      a href="javascript:;" 給我造型師
+
+  .container_12
+    .two-column 
+      .sub
+        h3.sub-header 個人資訊
+        .pnl.edit
+          == image_tag lorem_image("160x160"), :class => "avatar user"
+          .name =zh_lorem_name
+          ul.user-menu
+            li
+              a href="javascript:;"
+                | 我的信箱
+                span.badges 3
+            li 
+              a href="javascript:;"
+                | 可被預約時間
+                span.lasttime 2天前
+            li 
+              a href="javascript:;"
+                | 個人資料
+                span 80%
+            li 
+              a href="javascript:;"
+                | 服務基本資料
+                span 60%
+            li 
+              a href="javascript:;"
+                | 我的文章
+                span 2
+            li 
+              a href="javascript:;"
+                | 作品集
+                span 15
+            li 
+              a href="javascript:;" 活動專區
+            li 
+              a href="javascript:;" 社群分享記錄
+
+      .main-content
+        h2.page-title.pt-4 最新文章
+        .w340
+          -2.times do
+            .well.lb
+              .section-s.new
+                == image_tag lorem_image("100x100"), :class => "avatar"
+                h4.title ==zh_lorem_words 13
+                span.data =lorem_date.to_date
+                p =zh_lorem_words 25
+                == link_to("more", "javascript:;", :class => "more") 
+        .w340
+          -2.times do
+            .well.lb
+              .section-s.new
+                == image_tag lorem_image("100x100"), :class => "avatar"
+                h4.title ==zh_lorem_words 13
+                span.data =lorem_date.to_date
+                p =zh_lorem_words 25
+                == link_to("more", "javascript:;", :class => "more") 
+        .space
+        .well.pd01
+          h3.ed-title 我的作品集
+          .portfolio-tx
+            | 累積共
+            span
+              == link_to("6", "javascript:;") 
+            | 本
+          .fr style="margin:5px;"
+            input.search type="text"
+            button.btn.seach-btn-b type="sumbit"
+        div.inline-row
+          span 排序：
+          ul.sort
+            li
+              a.icon16.icon-star href="javascript:;" 最新更新
+            li
+              a.icon16.icon-eye href="javascript:;" 觀看數
+            li.active
+              a.icon16.icon-heart href="javascript:;" 收藏數
+          button.btn.fr + 新增相簿
+        form.form-horizontal.editalbum-form
+          .control-group
+            label.control-label 相簿名稱
+            .controls
+              input type="text" placeholder="Enter Text..."
+          .control-group
+            label.control-label 日期
+            .controls
+              select
+                option 年
+              | 年 
+              select
+                option 月
+              | 月 
+              select
+                option 日
+              | 日
+          .control-group
+            label.control-label 相簿簡介
+            .controls
+              textarea placeholder="Type in your message"
+          .control-group
+            label.control-label 相簿內容
+            .controls
+              span 上傳說明 - 每本相簿相片張數至多限制30張，請挑選精華且最想呈現給新人的照片吧
+              .clearfix
+              .fl.upinfo
+                | 已上傳
+                span 99
+                | 張，尚餘
+                span 99
+                | 張
+              .fr
+                button.btn type="button"  編輯
+                button.btn type="button"  Upload上傳照片
+
+        ul.album-list
+          -6.times do
+            li
+              .item2
+                a.album href="javascript:;"
+                  == image_tag lorem_image("220x220"), :class => "photo"
+                a.del-btn href="javascript:;" X
+                textarea placeholder="照片簡單說明"
+                .cover-check
+                // .cover-check true變更display:block
+        .fr
+          button.btn type="submit" 確定
+
+
+            

@@ -1297,7 +1297,7 @@ ul.tabs {
 .btn + .btn {
   margin-left: 10px;
 } 
-.editprofile-form {
+.editprofile-form , .editalbum-form {
   h4 {
     font-size: 14px;
     font-weight: bold;
@@ -1334,7 +1334,8 @@ ul.tabs {
     }
   }
 }
-.form-horizontal .control-group:before, .form-horizontal .control-group:after {
+.form-horizontal .control-group:before,
+.form-horizontal .control-group:after {
   display: table;
   line-height: 0;
   content: "";
@@ -1615,6 +1616,9 @@ ul.tabs {
     color: $PrimaryColor2;
   }
 }
+.album-list {
+  clear: both;
+}
 .album-list > li {
   h5 {
     font-weight: bold;
@@ -1632,9 +1636,48 @@ ul.tabs {
     background-color: #fff;
     @include box-shadow(0 3px rgba(0,0,0,.05));
     padding: 10px;
+    position: relative;
     > .album {
       display: block;
       margin: -10px -10px 0 -10px;
     }
   }
 }
+//9.5.2//
+.form-horizontal .controls {
+  margin-left: 100px;
+}
+.editalbum-form {
+  .control-label {
+    float: left;
+  }
+}
+.upinfo {
+  font-size:14px;
+  font-weight:bold;
+  span {
+    padding-left: 5px;
+    padding-right: 5px;
+    color: $PrimaryColor;
+  }
+}
+.del-btn {
+  text-align: center;
+  line-height: 24px;
+  display: block;
+  @include wh(24,24);
+  background-color: $PrimaryColor;
+  color: #000;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.cover-check {
+  display: none;
+  @include wh(220,220);
+  @include bg('check-cover.png');
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
