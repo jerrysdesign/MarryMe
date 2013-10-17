@@ -475,6 +475,9 @@ ul.menu-stacked {
 .pd01 {
   padding: 0px 10px;
 }
+.pd10 {
+  padding: 10px;
+}
 /*頁面區塊標題*/
 .page-title {
   @include wh(180,20);
@@ -496,6 +499,9 @@ ul.menu-stacked {
   }
   &.pt-5 {
     @include bg('pt-n-p.png');
+  }
+  &.pt-6 {
+    @include bg('pt-oo-p.png');
   }
 }
 .activity {
@@ -957,6 +963,9 @@ $calendarBg: #2e3641;
       background: $calendarBg;
       cursor: inherit;
     }
+    &:nth-child(7) {
+
+    }
   }
 }
 .calendar+.calendar {
@@ -1346,6 +1355,42 @@ ul.tabs {
   display: table;
   line-height: 0;
   content: "";
+}
+//9.1//
+.pd10 {
+  > .calendar {
+    max-width: 320px;
+    min-height: 320px;
+    margin: 10px;
+    li {
+      line-height: 44px;
+    }
+  }
+  .calendar + .calendar {
+    margin-left: 10px;
+  }
+}
+img.calendar-directions {
+  max-width: 700px;
+  margin: 10px -10px -18px -10px; 
+}
+.date {
+  background-color: #000;
+  color: $PrimaryColor;
+  font-weight: bold;
+  padding: 5px 10px;
+  padding-right: 100px;
+  display: inline-block;
+  margin-top: 10px;
+  .date-dd {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .date-wd {
+    font-size: 14px;
+    line-height: 60px;
+    margin-left: 10px;
+  }
 }
 //9.2//
 .user {

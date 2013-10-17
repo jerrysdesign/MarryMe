@@ -43,6 +43,17 @@ $PrimaryColor2: #5e9f86;
      clear: both;
   }
 }
+.clearfix {
+  &:before, &:after {
+    content: ""; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+     clear: both;
+  }
+}
 @mixin circle {
   @include border-radius (999px);
 }

@@ -191,3 +191,25 @@ $(function($){
   setSlide(0);
 
 });
+
+// date
+$(function(){
+  var weekdays = new Array();
+      weekdays[0] = "星期天";
+      weekdays[1] = "星期一";
+      weekdays[2] = "星期二";
+      weekdays[3] = "星期三";
+      weekdays[4] = "星期四";
+      weekdays[5] = "星期五";
+      weekdays[6] = "星期六";
+  // [0] = year, [1] = month, [2] = day
+  var cal_date = $(".date").data("destination");
+  var cal_date_arr = cal_date.split("-");
+  var dest = new Date(cal_date_arr[0],
+                      cal_date_arr[1],
+                      cal_date_arr[2]);
+  $(".date-y-m").text(dest.getFullYear() + "." + dest.getMonth());
+  $(".date-dd").text(dest.getDate());
+  $(".date-wd").text(weekdays[dest.getDay()]);
+});
+
