@@ -1408,6 +1408,75 @@ img.calendar-directions {
     padding-left: 10px;
   }
 }
+.ioslide {
+  position: relative;
+}
+
+input.iostyle[type=checkbox] {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  @include transition (all 0.2s);
+  width: 138px;
+  height: 35px;
+  @include border-radius(5px);
+  background-color: #fff;
+  @include box-shadow(0 1px rgba(255,255,255,.6), inset 0 2px rgba(0,0,0,.2));
+  border: solid 1px #ededed;
+}
+
+.ioslide label {
+  display: block;
+  position: absolute;
+  top: 3px;
+  margin-left: 68px;
+  z-index: 100;
+  cursor: pointer;
+  @include transition (margin-left 0.5s);
+  width: 71px;
+  height: 30px;
+  @include border-radius(5px 4px 4px 5px, 5px);
+  background-color: #86e4c0;
+  @include box-shadow(0 2px 1px rgba(71,73,60,.25), inset 0 -2px rgba(0,0,0,.3));
+  &:before {
+    display: block;
+    content: "";
+    position: absolute;
+    @include bg('slide-ar-l.png');
+    @include wh(18,18);
+    left: 25px;
+    top: 5px;
+    z-index: 80;
+  }
+}
+
+input.iostyle[type=checkbox] {
+  &:checked + label {
+    margin-left: 6px;
+    &:before {
+      @include bg('slide-ar-r.png');
+    }
+  }
+  &:before {
+    display: block;
+    content: "ON";
+    color: #000;
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    z-index: 80;
+  }
+  &:checked {
+    background: #bababa;
+    &:before {
+      content: "OFF";
+      left: 85px;
+    }
+  }
+}
 //9.2//
 .user {
   margin: 10px 20px;
