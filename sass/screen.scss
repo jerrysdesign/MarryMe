@@ -1374,11 +1374,16 @@ img.calendar-directions {
   max-width: 700px;
   margin: 10px -10px -18px -10px; 
 }
+.date , .notifications {
+  height: 56px;
+  display: inline-block;
+  float: left;
+  padding: 5px 10px;
+  font-weight: bold;
+}
 .date {
   background-color: #000;
   color: $PrimaryColor;
-  font-weight: bold;
-  padding: 5px 10px;
   padding-right: 100px;
   display: inline-block;
   margin-top: 10px;
@@ -1390,6 +1395,17 @@ img.calendar-directions {
     font-size: 14px;
     line-height: 60px;
     margin-left: 10px;
+  }
+}
+.notifications {
+  padding-left: 55px;
+  @include bg('alerts-icon-r.png');
+  background-repeat: no-repeat;
+  background-position: 20px center;
+  color: #e76049;
+  line-height: 60px;
+  span {
+    padding-left: 10px;
   }
 }
 //9.2//
