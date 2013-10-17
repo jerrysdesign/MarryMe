@@ -100,26 +100,37 @@
           | 未回復訊息
           span 3
         .clearfix
-        .well.pd21
-          .alerts
-            | 貼心小提醒：資料的完整性有助於新人與您的溝通！
-            | 完整度
-            .progress
-              .progress-ber
-                div style="width:80%; height:100%; background:#fff;"
-          form
-            table.reservation-header
-              thead
-                th 午宴
-                th
-                  .ioslide
-                    input#ioslide.iostyle type="checkbox"
-                    label for="ioslide"
-                th
-                th
-              tr
-                td
-                td
-                td
-                td
-
+        -2.times do
+          .well.pd21
+            form
+              table.reservation
+                thead
+                  th.h3 width="72" 午宴
+                  th
+                    .ioslide
+                      input#ioslide.iostyle type="checkbox"
+                      label for="ioslide"
+                  th width="145"
+                    | 收到需求單數目
+                    span style="color:#86e4c0;" 3
+                  th
+                  th width="110"
+                    img src="images/minus.png"
+                -4.times do
+                  tr
+                    td
+                      img.alert-icon.fl src="images/alerts-icon-r.png"
+                      input.fl type="checkbox"
+                    td
+                      == image_tag lorem_image("56x56"), :class => "avatar"
+                      .name =zh_lorem_name
+                    td
+                      span =zh_lorem_words 10
+                      span =lorem_date.to_date
+                    td
+                      =zh_lorem_paragraph
+                    td
+                      button.btn type="button" 查看
+                      .clearfix
+                      label
+                        input type="checkbox" 結束需求回復
