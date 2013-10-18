@@ -624,22 +624,28 @@ ul.menu-stacked {
   position: absolute;
   top: -12px;
   cursor: pointer;
+  z-index: 99;
+  .icon {
+    @include wh(16,16);
+    margin-left: 12px;
+    margin-top: 14px;
+  }
   &.favorite {
     right: 13px;
     .icon {
       @include icon('favorite-icon-w.png');
-      @include wh(16,16);
-      margin-left: 12px;
-      margin-top: 14px;
     }
   }
   &.share {
     right: 55px;
     .icon {
       @include icon('share-icon-w.png');
-      @include wh(16,16);
-      margin-left: 12px;
-      margin-top: 14px;
+    }
+  }
+  &.hart {
+    right: 55px;
+    .icon {
+      @include icon('hart-icon-w.png');
     }
   }
 }
@@ -682,7 +688,7 @@ ul.menu-stacked {
 .avatar-wrapper {
   position: relative;
   height: 220px;
-  overflow: hidden;
+  //overflow: hidden;
   .avatar {
     position: absolute;
   }
@@ -1898,4 +1904,103 @@ img.random {
 //reg-success//
 .panel-heading .heading-title {
   overflow: hidden;
+}
+// index //
+
+.mmenu {
+  background-color: #f0f0f0;
+  height: 58px;
+  padding-top: 15px;
+  text-align: center;
+  > ul {
+    display: block;
+    width: 670px;
+    margin: 0 auto;
+    overflow: hidden;
+    > li {
+      display: inline-block;
+      > a {
+        display: block;
+        padding: 5px 30px;
+        color: #000;
+        font-weight: bold;
+        @include text-shadow (0 1px 1px #fff);
+      }
+    }
+    li + li {
+      border-left: 1px solid #dedede;
+    }
+  }
+  .icon-camera , .icon-woman , .icom-videocam , .icom-balloon {
+    padding-left: 75px;
+    background-position: 30px center;
+    background-repeat: no-repeat;
+  }
+  .icon-camera {
+    @include bg('camera-icon.png');
+  }
+  .icon-woman {
+    @include bg('woman-icon.png');
+  }
+  .icom-videocam {
+    @include bg('videocam-icon.png');
+  }
+  .icom-balloon {
+    @include bg('balloon..png');
+  }
+}
+.events {
+  .avatar-wrapper {
+    height: 300px;
+  }
+  .avatar {
+    
+  }
+  .ribbon {
+    top: -11px;
+  }
+  .share {
+    right: 13px;
+  }
+  .hart {
+    right: 55px;
+  }
+  .cover {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+  dl {
+    overflow: hidden;
+  }
+  dt {
+    width: 45px;
+    float: left;
+  }
+  dd {
+    margin-left: 45px;
+  }
+  .places {
+    color: $PrimaryColor;
+    span {
+      padding: 0 15px;
+    }
+  }
+}
+.cooperation {
+  margin-bottom: 80px;
+  .pnlh {
+    width: 30%;
+    @include bg('b-space.gif');
+    margin: 0 auto;
+    margin-bottom: 40px;
+    h2 {
+      display: inline-block;
+      padding: 5px 15px;
+      color: #000;
+      font-size: 14px;
+      margin: 0 auto;
+      background-color: #fff;
+    }
+  }
 }

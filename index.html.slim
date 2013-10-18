@@ -77,7 +77,6 @@ html
           span.slogn2
             | 在這裡  沒有比價  只有最適合你的  新祕＆婚攝
         == render :partial => "partials/user_assets" , :locals => {:f => "login"}
-        
         form.search-bar
           .ul
             .li
@@ -96,7 +95,84 @@ html
               .search-box
                 input.input-text type="text"
                 button.search-btn type="submit" 搜尋
-      
+      .main
+        .mmenu
+          ul
+            li
+              == link_to("婚禮攝影師Photographer","javascript:;",:class => "icon-camera")
+            li
+              == link_to("新娘秘書Bridal","javascript:;",:class => "icon-woman")
+            li
+              == link_to("錄影師videographer","javascript:;",:class => "icom-videocam")
+        .grid-list.container_12
+          -12.times do
+            .item.grid_3
+              .avatar-wrapper
+                == image_tag lorem_image("220x220"), :class => "avatar"
+                .hover
+                  a.quick-view.show-modal href="javascript:;"
+                    | Quick View 
+                  dl.activity.inline
+                    dt.trending
+                    dd 999
+                    dt.favorite
+                    dd 999
+                    dt.share
+                    dd.share-to
+                      | Share
+
+              .item-description
+                == image_tag lorem_image("40x40"), :class => "avatar fl"
+                .fl
+                  h5.name =zh_lorem_name
+                  h5.enname =zh_lorem_name
+                == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
+        .mmenu
+          ul
+            li
+              == link_to("活動專區 Events","javascript:;",:class => "icon-camera")
+        .events.grid-list.container_12
+          -3.times do
+            .item.grid_4
+
+              .avatar-wrapper
+                .ribbon.share
+                  .icon
+                .ribbon.hart
+                  .icon
+                == image_tag lorem_image("300x300"), :class => "avatar"
+                img.cover src="images/events-p-cover.png"
+              .pd10
+                dl
+                  dt 名稱：
+                  dd =zh_lorem_words 15
+                  dt 日期：
+                  dd =lorem_date
+                  dt 費用：
+                  dd $ 1,000
+                  dt 地點：
+                  dd =zh_lorem_name
+                
+                .places.h4.fl
+                  | 剩餘
+                  span.h3 7
+                  | 名
+                a.btn.fr href="javascript:;" 我要報名
+      .footer.cooperation
+        .pnlh
+          h2 合作廠商 Partners
+        a href="javascript:;"
+          img src="images/taipeipryal.jpg" alt=""
+        a href="javascript:;"
+          img src="images/bluebay-logo.jpg" alt=""
+        a href="javascript:;"
+          img src="images/linli-logo.jpg" alt=""
+        a href="javascript:;"
+          img src="images/mht-logo.jpg" alt=""
+        a href="javascript:;"
+          img src="images/demetrios-logo.jpg" alt=""
+        a href="javascript:;"
+          img src="images/bluebay2-logo.jpg" alt=""
       == render :partial => "partials/footer"
       == render :partial => "partials/modal-login"
       == render :partial => "partials/modal-register"
