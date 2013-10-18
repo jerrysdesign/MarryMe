@@ -1180,7 +1180,10 @@ ul.tabs {
   z-index: 9;
 }
 .avgrund-active {
-  @include filter (blur(2px));
+  @include filter (blur(5px));
+  position: fixed;
+  left: 50%;
+  margin-left: -509px;//scroll+9px//之後再用jq判斷
 }
 
 .slider-photo {
