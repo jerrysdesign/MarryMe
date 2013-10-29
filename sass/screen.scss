@@ -1085,9 +1085,9 @@ ul.tabs {
 /* Modal styles */
 .modal {
   display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
+  // position: fixed;
+  // top: 50%;
+  // left: 50%;
   // @include box-sizing (content-box);
   @include transform (translate(-50%, -50%));
   background: #fff;
@@ -1098,7 +1098,7 @@ ul.tabs {
   &.styled {
     width: 820px;
     padding: 20px;
-    max-height: 620px;
+    //max-height: 620px;
   }
   &.login-modal {
     width: 620px;
@@ -1166,6 +1166,11 @@ ul.tabs {
       overflow-y: scroll;
       max-height: 350px;
     }
+  }
+  .title-header {
+    background-color: #86e4c0;
+    @include box-shadow(0 2px 5px rgba(0,0,0,.22));
+    line-height: 52px;
   }
 }
 .modal-background {
@@ -1322,7 +1327,7 @@ ul.tabs {
 .btn + .btn {
   margin-left: 10px;
 } 
-.editprofile-form , .editalbum-form , .login-form {
+.editprofile-form , .editalbum-form , .login-form , .order-form {
   h4 {
     font-size: 14px;
     font-weight: bold;

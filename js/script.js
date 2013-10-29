@@ -116,6 +116,13 @@ $(function(){
     $('body').append($('#reg-modal.modal.reg-modal'));
     e.preventDefault();
   });
+  $( '#show-2-4-modal' ).on( 'click', function(e) {
+    $( '#m2-4' ).fadeIn();
+    $( '.modal-background' ).fadeTo( 300 , 1 );
+    $( '.wrapper').addClass('avgrund-active');
+    $('body').append($('#m2-4.modal.styled'));
+    e.preventDefault();
+  });
   $( '.modal-close' ).on( 'click', function(e) {
     $( '.modal, .modal-background' ).fadeOut();
     $( '.wrapper').removeClass('avgrund-active');
@@ -126,6 +133,14 @@ $(function(){
       $( '.modal, .modal-background' ).fadeOut();
       $( '.wrapper').removeClass('avgrund-active');
     }   // esc
+  });
+  $('.modal').css({
+    'position' : 'absolute',
+    'left' : '50%',
+    'top' : '50%',
+    'z-index' : '10'
+    //'margin-left' : -$(this).width()/2,
+    //'margin-top' : -$(this).height()/2
   });
 });
 
