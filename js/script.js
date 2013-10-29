@@ -207,6 +207,14 @@ $(function($){
 
 });
 
+$(function(){
+  $('.mediabannerlist li').click( function(){
+    var NN = $(this).index();
+    $('.slider-photo li').removeClass('active');
+    $('.slider-photo li').eq(NN).addClass('active');
+  });
+});
+
 // date
 $(function(){
   var weekdays = new Array();
