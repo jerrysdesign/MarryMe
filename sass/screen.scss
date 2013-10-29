@@ -106,7 +106,7 @@ h6,
   margin: 0 auto;
   width: 980px;
   border: 10px solid $PrimaryColor;
-  display: 1;
+  z-index: 1;
 }
 .header {
   position: relative;
@@ -787,7 +787,7 @@ ul.menu-stacked {
   width:60px;
   position:fixed; 
   z-index: 9999;
-  word-spacing: nowrap;
+  white-space: nowrap;
   width: 144px;
   a {
     display: block;
@@ -1010,7 +1010,7 @@ ul.tabs {
     overflow: hidden;
     position: relative;
     font-size: 16px;
-    text-align: ecnter;
+    text-align: center;
     &:hover {
       background-color: #ccc;
       color: #333;
@@ -1093,7 +1093,7 @@ ul.tabs {
   background: #fff;
   border-top: 10px solid $PrimaryColor;
   @include border-radius (3px);
-  @include box-shadow (0 3px 14px -4px black);
+  @include box-shadow (0 3px 14px black);
   z-index: 99;
   &.styled {
     width: 820px;
@@ -1721,7 +1721,7 @@ table.reservation {
 }              
 //9.5//
 .ed-title {
-  font-style: 18px;
+  font-size: 18px;
   font-weight: bold;
   color: $PrimaryColor;
   display: inline-block;
