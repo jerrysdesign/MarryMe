@@ -1,24 +1,26 @@
-#reg-modal.modal.reg-modal
-  a.modal-close href="javascript:;" close
-  img.logo src="images/logo.png"
-  //
-  .panel
-    .panel-heading
-      h3.heading-title
-        | 註冊成功
-        img.fr src="images/reg-success.png"
-    .panel-body
-      p 恭喜您註冊成功！
-      p 請到下方註冊之電子信箱收帳號確認信，以完成註冊程序喔！
-      .clearfix
-      .login-form
-        .control-group
-          .control-label
-            | 帳號
-          .controls
-            =zh_lorem_words 10
-        .control-group
-          .control-label
-            | 密碼
-          .controls
-            =zh_lorem_words 8
+#reg-modal.container_12 style="z-index:10;"
+  .grid_10.push_7
+    .modal
+      a.modal-close href="javascript:;" close
+      img.logo src="images/logo.png"
+      //
+      .panel
+        .panel-heading
+          h3.heading-title
+            | 註冊成功
+            img.fr src="images/reg-success.png"
+        .panel-body
+          p 恭喜您註冊成功！
+          p 請到下方註冊之電子信箱收帳號確認信，以完成註冊程序喔！
+          .clearfix
+          .login-form
+            .control-group
+              .control-label
+                | 帳號
+              .controls
+                =zh_lorem_words 10
+            .control-group
+              .control-label
+                | 密碼
+              .controls
+                =zh_lorem_words 8
