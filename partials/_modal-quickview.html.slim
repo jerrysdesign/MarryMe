@@ -1,0 +1,38 @@
+#quickview.container_12 style="z-index:10;"
+  .grid_21.push_1
+    .modal
+      a.modal-close href="javascript:;" close
+      .grid_row
+        .grid_12.colum-l
+          == image_tag lorem_image("50x50"), :class => "avatar fl"
+          h3 ==zh_lorem_words 20
+          p ==zh_lorem_paragraph
+          
+          ul.slider-photo 
+            -5.times do
+              li
+                == image_tag lorem_image("306x460"), :class => "show"
+              li
+                == image_tag lorem_image("460x306"), :class => "show"
+              li
+                == image_tag lorem_image("460x460"), :class => "show"
+
+          .slider-sub 
+            .slider-sub-inner
+              ul.mediabannerlist
+                -15.times do
+                  li.mag_cover
+                    a href="javascript:;" 
+                      == image_tag lorem_image("100")
+              .scroller.prev
+              .scroller.next
+      
+        .grid_8.colum-r
+          == image_tag lorem_image("72x72"), :class => "avatar fl"
+          .type 婚禮攝影師
+          h4.name ==zh_lorem_name
+          h4.enname ==lorem_name
+          .counties 地區:北區
+
+          .description
+            p ==zh_lorem_paragraphs 10

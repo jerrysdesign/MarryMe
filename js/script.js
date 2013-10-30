@@ -96,15 +96,14 @@ $(function(){
 
 $(function(){
   //Quick view 
-  var idN = $(this).attr('id');
-  
-  // $( '.show-modal' ).on( 'click', function(e) {
-  //   $( '.modal' ).fadeIn();
-  //   $( '.modal-background' ).fadeTo( 300 , 1 );
-  //   $( '.wrapper').addClass('avgrund-active');
-  //   $('body').append($('.modal.styled'));
-  //   e.preventDefault();
-  // });
+  //var idN = $(this).attr('id');
+  $('.show-modal').on('click', function(e) {
+    $('#quickview .modal').fadeIn();
+    $('.modal-background').fadeTo( 300 , 0.8);
+    $('.wrapper').addClass('avgrund-active');
+    $('body').append($('#quickview'));
+    e.preventDefault();
+  });
 
   $('#show-login-modal').on('click',function(e) {
     $('#login-modal .modal').fadeIn();

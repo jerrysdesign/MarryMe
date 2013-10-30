@@ -1099,6 +1099,7 @@ ul.tabs {
   margin-top: 80px;
   margin-bottom: 20px;
   padding: 20px;
+  @include clearfix;
   > .logo {
     @include wh(98,98);
     margin-top: 0; 
@@ -1115,8 +1116,7 @@ ul.tabs {
   .row-t {}
   .row-d {}
   .colum-l {
-    width: 480px;
-    float: left;
+    text-align: left;
     h3 , p {
       margin-left: 60px;
     }
@@ -1126,10 +1126,10 @@ ul.tabs {
     }
   }
   .colum-r {
-    width: 300px;
-    float: right;
-    h4 , .type , .counties {
+    text-align: left;
+    h4 , .type , .counties , .name {
       margin-left: 82px;
+      display: block;
     }
     h4 {
       font-size: 14px;
@@ -1182,7 +1182,7 @@ ul.tabs {
 }
 
 .slider-photo {
-  @include wh(480,320);
+  @include wh(460,306);
   @include clearfix;
   background: black;
   margin-bottom: 10px;
@@ -1195,7 +1195,7 @@ ul.tabs {
   ul {
   }
   li {
-    width: 480px;
+    width: 460px;
     position: absolute;
     text-align: center;
     left: 100%;
@@ -1206,7 +1206,7 @@ ul.tabs {
 }
 .slider-sub {
   position: relative;
-  width: 480px;
+  width: 460px;
   clear: both;
   @include clearfix;
   .slider-sub-inner {

@@ -45,7 +45,7 @@
                 input type="checkbox" checkbox #{i}
       .main-content.grid-list
         -12.times do
-          .item.grid_4
+          .item.grid_6
             .avatar-wrapper
               == image_tag lorem_image("220x220"), :class => "avatar"
               .hover
@@ -66,4 +66,4 @@
                 h5.name =zh_lorem_name
                 h5.enname =zh_lorem_name
               == link_to("合作", "javascript:;", :class=>"collaboration-btn fr")
-== render :partial => "partials/modal-2-1"
+== render :partial => "partials/modal-quickview"
