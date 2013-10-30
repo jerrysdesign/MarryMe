@@ -1,44 +1,46 @@
-#reg-modal.modal.reg-modal
-  a.modal-close href="javascript:;" close
-  img.logo src="images/logo.png"
-  .panel
-    .panel-heading
-      h3.heading-title 新人會員註冊
-    .panel-body
-      p 恭喜你即將面對人生中的一件大事，在準備婚禮的過程中，期望MarryMe能夠協助您找到夢想中的專業人士。
-      p 歡迎您的加入，請填寫下方欄位基本會員資料！（皆必填）
-      .clearfix
-      form.login-form role="form"
-        .control-group
-          label.control-label
-            | 帳號
-          .controls
-            input type="text" placeholder="您常用的電子信箱"
-        .control-group
-          label.control-label
-            | 密碼
-          .controls
-            input type="password" placeholder="8~12個任意組合的英數字"
-        .control-group
-          label.control-label
-            | 確認密碼
-          .controls
-            input type="password" placeholder="請再輸入一次您所設定的密碼"
-        .control-group
-          label.control-label
-            | 姓名
-          .controls
-            input type="text" placeholder="本名或暱稱皆可"
-        .control-group
-          label.control-label
-            | 圖文驗證
-          .controls
-            input type="text" placeholder="請輸入四個數字" 
-            == image_tag lorem_image("50x25"), :class => "random" 
-            a href="javascript:;" 換一張
-        div style="font-size:12px;color:#ccc;background:none;"
-          input type="checkbox" 我同意 Marry Me
-          a href="javascript:;" 服務條款
-          | 及
-          a href="javascript:;" 隱私權政策
-        button.btn.fr type="sumbit" 成為會員
+#reg-modal.container_12 style="z-index:10;"
+  .grid_10.push_7
+    .modal
+      a.modal-close href="javascript:;" close
+      img.logo src="images/logo.png"
+      .panel
+        .panel-heading
+          h3.heading-title 新人會員註冊
+        .panel-body
+          p 恭喜你即將面對人生中的一件大事，在準備婚禮的過程中，期望MarryMe能夠協助您找到夢想中的專業人士。
+          p 歡迎您的加入，請填寫下方欄位基本會員資料！（皆必填）
+          .clearfix
+          form.login-form role="form"
+            .control-group
+              label.control-label
+                | 帳號
+              .controls
+                input type="text" placeholder="您常用的電子信箱"
+            .control-group
+              label.control-label
+                | 密碼
+              .controls
+                input type="password" placeholder="8~12個任意組合的英數字"
+            .control-group
+              label.control-label
+                | 確認密碼
+              .controls
+                input type="password" placeholder="請再輸入一次您所設定的密碼"
+            .control-group
+              label.control-label
+                | 姓名
+              .controls
+                input type="text" placeholder="本名或暱稱皆可"
+            .control-group
+              label.control-label
+                | 圖文驗證
+              .controls
+                input type="text" placeholder="請輸入四個數字" 
+                == image_tag lorem_image("50x25"), :class => "random" 
+                a href="javascript:;" 換一張
+            div style="font-size:12px;color:#ccc;background:none;"
+              input type="checkbox" 我同意 Marry Me
+              a href="javascript:;" 服務條款
+              | 及
+              a href="javascript:;" 隱私權政策
+            button.btn.fr type="sumbit" 成為會員

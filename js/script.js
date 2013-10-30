@@ -113,10 +113,10 @@ $(function(){
     $('body').append($('#login-modal'));
     e.preventDefault();
   });
-  $( '#show-register-modal' ).on( 'click', function(e) {
-    $( '#reg-modal' ).fadeIn();
-    $( '.modal-background' ).fadeTo( 300 , 1 );
-    $( '.wrapper').addClass('avgrund-active');
+  $('#show-register-modal').on('click',function(e) {
+    $('#reg-modal .modal').fadeIn();
+    $('.modal-background').fadeTo( 300 , 0.8 );
+    $('.wrapper').addClass('avgrund-active');
     $('body').append($('#reg-modal'));
     e.preventDefault();
   });

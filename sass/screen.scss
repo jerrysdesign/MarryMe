@@ -1091,30 +1091,19 @@ ul.tabs {
 /* Modal styles */
 .modal {
   display: none;
-  // position: fixed;
-  // top: 50%;
-  // left: 50%;
-  // @include box-sizing (content-box);
-  //@include transform (translate(-50%, -50%));
   background: #fff;
   border-top: 10px solid $PrimaryColor;
   @include border-radius (3px);
   @include box-shadow (0 3px 14px black);
   z-index: auto;
   margin-top: 80px;
+  margin-bottom: 20px;
   padding: 20px;
-  // &.styled {
-  //   width: 820px;
-  //   padding: 20px;
-  // }
-  &.login-modal {
-    width: 620px;
-    padding: 20px;
+  > .logo {
+    @include wh(98,98);
+    margin-top: 0; 
   }
-  &.reg-modal {
-    width: 380px;
-    padding: 20px;
-  }
+  text-align: center; //fix logo img
   .modal-close {
     @include wh(38,32);
     @include bg('modalclose.png');
@@ -1123,12 +1112,6 @@ ul.tabs {
     float: right;
     margin: -20px;
   }
-  // .inner {
-  //   width: 820px;
-  //   max-height: 620px;
-  //   padding: 20px;
-  //   overflow-y: auto;
-  // }
   .row-t {}
   .row-d {}
   .colum-l {
@@ -1873,19 +1856,16 @@ table.reservation {
 }
 
 //login modal//
-.login-modal.modal {
-  > img.logo {
-    margin-left: 250px;
-    margin-top: 0;
-  }
-  .control-group + .control-group {
-    padding-top: 0;
-  }
-}
+// .login-modal.modal {
+//   .control-group + .control-group {
+//     padding-top: 0;
+//   }
+// }
 .panel {
   margin: 0 auto;
   background-color: #fff;
   @include box-shadow(0 2px 5px rgba(0,0,0,.22));
+  text-align: left;
 }
 .panel-heading {
   padding: 5px 15px;
@@ -1903,16 +1883,16 @@ table.reservation {
   color: inherit;
 }
 //Reg//
-.reg-modal > img.logo {
-  margin-left: 130px;
-  margin-top: 0;
-}
-.reg-modal {
-  .control-group + .control-group {
-    padding-top: 5px;
-    padding-bottom: 0;
-  }
-}
+// .reg-modal > img.logo {
+//   margin-left: 130px;
+//   margin-top: 0;
+// }
+// .reg-modal {
+//   .control-group + .control-group {
+//     padding-top: 5px;
+//     padding-bottom: 0;
+//   }
+// }
 img.random {
   vertical-align: top;
 }
