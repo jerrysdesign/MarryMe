@@ -5,7 +5,7 @@
 // Grid system
 @import "960/grid";
 .container_12 {
-  @include grid-system(12);
+  @include grid-system(24);
   @include clearfix;
 }
 $ninesixty-columns: 24;
@@ -21,7 +21,12 @@ $ninesixty-columns: 24;
     @include grid(18);
   }
 }
-
+//.grid_* > .grid_*
+.grid_row {
+  @include clearfix;
+  margin-left: -10px;
+  margin-right: -10px;
+}
 // Reset
 body {
   background-color: $bodyBgColor;
@@ -92,7 +97,7 @@ h6,
   }
 }
 // 新人推薦分享
-.grid_6 .grid_2 {
+.grid_12 .grid_16 {
   &:first-child {
     margin-left: 0;
   }
@@ -154,10 +159,10 @@ h6,
   }
   .main-content {
     &.grid-list {
-      .grid_3:nth-child(3n+1) {
+      .grid_6:nth-child(3n+1) {
         margin-left: 0;
       }
-      .grid_3:nth-child(3n+3) {
+      .grid_6:nth-child(3n+3) {
         margin-right: 0;
       }
     }
@@ -1590,13 +1595,13 @@ table.reservation {
 .main-content .page-title {
   margin-top: 10px;
 }
-.w340 {
-  width: 340px;
-  display: inline-block;
-}
-.w340 + .w340 {
-  margin-left: 20px;
-}
+// .w340 {
+//   width: 340px;
+//   display: inline-block;
+// }
+// .w340 + .w340 {
+//   margin-left: 20px;
+// }
 .space {
   border: 1px solid transparent;
   border-top-color: #d6d6d6 ;

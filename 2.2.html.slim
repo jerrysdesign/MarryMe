@@ -8,7 +8,7 @@
       a href="#" 相簿相片列表
 
   .container_12
-    .grid_6
+    .grid_12
       h2.page-title.pt-1
         | 造型師基本資料
       .well
@@ -60,7 +60,7 @@
             h3.tab_drawer_heading rel="tab4"
             #tab4.tab_content
 
-    .grid_6
+    .grid_12
       h2.page-title.pt-3
         | 造型師開放預約時間
       .well
@@ -93,7 +93,7 @@
             img src="images/booking-btn.png" alt="我有需求，發送訊息"
 
   .container_12
-    .grid_6
+    .grid_12
       h2.page-title.pt-4
         | 最新文章
       -2.times do
@@ -105,28 +105,27 @@
             p =zh_lorem_words 45
             == link_to("more", "javascript:;", :class => "more") 
       == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
-    .grid_6
+    .grid_12
       h2.page-title.pt-5
         | 新人推薦分享
-    .grid_6
-      -3.times do
-        .grid_2
-          .well.tb
-            .section-s.new-p
-              == image_tag lorem_image("100x100"), :class => "avatar img-circle"
-              h4.title 新人推薦分享棒
-              span.data =lorem_date.to_date
-              p =zh_lorem_words 20
-              == link_to("more", "javascript:;", :class => "more")
-              == link_to("新人小明", "javascript:;", :class => "arthor")
-    .grid_6
+      .grid_row 
+        -3.times do
+          .grid_4
+            .well.tb
+              .section-s.new-p
+                == image_tag lorem_image("100x100"), :class => "avatar img-circle"
+                h4.title 新人推薦分享棒
+                span.data =lorem_date.to_date
+                p =zh_lorem_words 20
+                == link_to("more", "javascript:;", :class => "more")
+                == link_to("新人小明", "javascript:;", :class => "arthor")
       == link_to("READ MORE", "javascript:;", :class => "readmore-btn")
   .container_12
-    .grid_12
+    .grid_24
       h2.page-title.pt-2
         | 造型師作品集
     -4.times do
-      .grid_6
+      .grid_12
         .well
           .section-s.s-pt
             h4.title ==zh_lorem_words 20
