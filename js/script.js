@@ -106,10 +106,10 @@ $(function(){
   //   e.preventDefault();
   // });
 
-  $( '#show-login-modal' ).on( 'click', function(e) {
-    $( '#login-modal' ).fadeIn();
-    $( '.modal-background' ).fadeTo( 300 , 1 );
-    $( '.wrapper').addClass('avgrund-active');
+  $('#show-login-modal').on('click',function(e) {
+    $('#login-modal .modal').fadeIn();
+    $('.modal-background').fadeTo( 300 , 0.8 );
+    $('.wrapper').addClass('avgrund-active');
     $('body').append($('#login-modal'));
     e.preventDefault();
   });
