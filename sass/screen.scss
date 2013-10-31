@@ -964,11 +964,11 @@ $calendarBg: #2e3641;
     cursor: pointer;
     font-size: 15px;
     &:nth-child(n+8) {
-      &:hover,&.active {
-        font-weight: bold;
-        @include circle;
-        background-color: $calendarBg;
-      }
+      // &:hover,&.active {
+      //   font-weight: bold;
+      //   @include circle;
+      //   background-color: $calendarBg;
+      // }
     }
     &:nth-child(-n+7) {
       font-size: 11px;
@@ -976,7 +976,25 @@ $calendarBg: #2e3641;
       cursor: inherit;
     }
     &:nth-child(7) {
-
+    }
+    &.open ,&.close,&.notifications {
+      @include circle;
+      border-width: 2px;
+      border-style: solid;
+    }
+    &.open {
+      //開放預約
+      background-color: #fff;
+      border-color: #fff;
+    }
+    &.close {
+      //關閉預約
+      background-color: $calendarBg;
+      border-color: $calendarBg;
+    }
+    &.notifications {
+      //未讀
+      border-color: #e76049;
     }
   }
 }
