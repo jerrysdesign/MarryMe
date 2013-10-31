@@ -246,8 +246,8 @@ $( '#show-2-4-modal' ).on( 'click', function(){
   $( '#m2-4' ).fadeIn();
   $( '.modal-background' ).fadeTo( 300 , 0.9 );
   $( '.wrapper').addClass('avgrund-active');
-  $('body').append($('#m2-4'));
-  $('#m2-4 .modal').css({
+  $('body').append($('#require'));
+  $('#require .modal').css({
     'display':'block'
   });
 });

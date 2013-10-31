@@ -1,15 +1,259 @@
-#m2-4.container_12 style="z-index:10;"
-  .grid_21.push_1
-    .modal
-      a.modal-close href="javascript:;" close
-      .fr
-        span 登入會員即可幫您自動帶入相關資料喔
-        button.btn type="button" Login
+#require.container_12 style="z-index:10;"
+  .grid_20.push_1.modal
+    a.modal-close href="javascript:;" close
+    .clearfix
+    .fr
+      span 登入會員即可幫您自動帶入相關資料喔
+      button.btn type="button" Login
+    .clearfix
+    .title-header
+      h3 發送需求單
+    form.order-form
+      h4 婚禮需求
+      .grid_row
+        .grid_10
+          .grid_row
+            h5 彩妝造型
+            .grid_10
+              label
+                input type="checkbox" 提親
+            .grid_5
+              label
+                input type="checkbox" 訂婚宴客
+            .grid_5
+              label
+                input type="checkbox" 儀式+訂婚宴客
+            .grid_5
+              label
+                input type="checkbox" 結婚宴客
+            .grid_5
+              label
+                input type="checkbox" 結婚宴客+結婚宴客
+            .grid_10
+              label
+                input type="checkbox" 結訂同天，儀式+宴客
+            .grid_10
+              label
+                input type="checkbox" 其他
+                input type="text"    
+        .grid_10
+          .grid_row
+            h5 拍攝 / 錄影
+            .grid_5
+              label
+                input type="checkbox" 平面攝影
+            .grid_5
+              label
+                input type="checkbox" 動態錄影
+            .grid_10
+              label
+                input type="checkbox" 平面攝影+動態錄影
+            .grid_5
+              label
+                input type="checkbox" 成長MV
+            .grid_5
+              label
+                input type="checkbox" 婚紗MV
+            .grid_10
+              label
+                input type="checkbox" 成長MV
+            .grid_10
+              label
+                input type="checkbox" 其他
+                input type="text" 
+      h4 婚禮資訊
+      .grid_row
+        fieldset
+          h5 提親儀式
+          .control-group.inline-row
+            label 時間
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 上午
+              label
+                input type="radio" id="" value="option2" 下午
+              label
+                input type="radio" id="" value="option3" 晚上
+              label
+                input type="radio" id="" value="option4" 未確定
+          .control-group.inline-row
+            label 宴客地點
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 自家
+              label
+                input type="radio" id="" value="option2" 未確定
+          .control-group.inline-row
+            label 位置地址
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input required="" title="" type="text"
+          h5 訂婚
+          .control-group.inline-row
+            label 時間
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 上午
+              label
+                input type="radio" id="" value="option2" 下午
+              label
+                input type="radio" id="" value="option3" 晚上
+              label
+                input type="radio" id="" value="option3" 未確定
+          .control-group.inline-row
+            label 宴客地點
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 自家
+              label
+                input type="radio" id="" value="option2" 未確定
+          .control-group.inline-row
+            label 位置地址
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input required="" title="" type="text"
+          .control-group.inline-row
+            label 婚紗更換
+            //
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input required="" title="" type="text"
+            .clearfix
+            //
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input required="" title="" type="text"
+            //
+            .controls
+              button.btn type="button" +
+          h5 結婚
+          .control-group.inline-row
+            label 時間
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 上午
+              label
+                input type="radio" id="inlineradio2" value="option2" 下午
+              label
+                input type="radio" id="inlineradio3" value="option3" 晚上
+              label
+                input type="radio" id="inlineradio4" value="option3" 未確定
+          .control-group.inline-row
+            label 宴客地點
+            .controls
+              input required="" title="Fill your first and last name" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 自家
+              label
+                input type="radio" id="" value="option2" 未確定
+          .control-group.inline-row
+            label 位置地址
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input required="" title="" type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 同訂婚造型
+              label
+                input type="radio" id="" value="option2" 未確定
+      h4 基本資料
+      .grid_row.form-horizontal
+        .control-group
+          label.control-label 姓名
+          .controls
+            input required="" title="" type="text"
+        .control-group
+          label.control-label 姓別
+          .controls
+            label
+              input type="radio" id="" value="option1" 女
+            label
+              input type="radio" id="" value="option2" 男
+            label 
+              input type="radio" id="" value="option3" 其他
+        .control-group
+          label.control-label 行動電話
+          .controls
+            input type="text"
+        .control-group
+          label.control-label 聯絡電話
+          .inline-row
+            .controls
+              input type="text"
+            .controls
+              label
+                input type="radio" id="" value="option1" 同手機號碼
+          .controls
+            | 方便聯絡時間
+            label
+              input type="checkbox" 早上 09:00-12:00
+            label
+              input type="checkbox" 中午 12:00-14:00
+            label
+              input type="checkbox" 下午 14:00-18:00
+        .control-group
+          label.control-label 電子信箱
+          .controls
+            input type="text"
+        .control-group
+          label.control-label 連絡地址
+          .inline-row
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input type="text"
+        .control-group
+          label.control-label 連絡方式
+          .inline-row
+            .controls
+              select
+                option 1
+                option 3
+                option 3
+            .controls
+              input type="text"
+            .controls
+              button.btn type="button" +
+      h4 備註 (非必填)
+      .grid_row
+        .control-group
+          .controls
+            textarea rows="3"
+      .alert.grid_13.push_3
+        | 貼心小提醒：資料的完整性有助於造型師/新祕與您的溝通！
       .clearfix
-      .title-header
-        h3 發送需求單
-      form.order-form
-        h4 婚禮需求
-        h4 婚禮資訊
-        h4 基本資料
-        h4 備註（非必填）
+      bottom.btn style="margin-left:350px" type="sumbit" 發送需求

@@ -1085,7 +1085,6 @@ ul.tabs {
   height: 340px;
   -ms-overflow-y: scroll;
   overflow-y: scroll;
-  
 }
 
 /* Modal styles */
@@ -1161,6 +1160,9 @@ ul.tabs {
     background-color: #86e4c0;
     @include box-shadow(0 2px 5px rgba(0,0,0,.22));
     line-height: 52px;
+  }
+  form {
+    text-align: left;
   }
 }
 .modal-background {
@@ -1331,10 +1333,12 @@ ul.tabs {
   label , .control-label {
     font-size: 14px;
     color: #333;
-    font-weight: bold;
     &:before {
       content:url(../images/sub-menu-liststyle.png);
       padding-right: 10px;
+    }
+    .control-label {
+      font-weight: bold;
     }
   }
   label + label {
@@ -1821,10 +1825,13 @@ table.reservation {
 .form-horizontal .controls {
   margin-left: 100px;
 }
-.editalbum-form {
+.editalbum-form , .form-horizontal {
   .control-label {
     float: left;
   }
+}
+.control-label {
+  font-weight: bold;
 }
 .upinfo {
   font-size:14px;
@@ -1998,4 +2005,44 @@ img.random {
       background-color: #fff;
     }
   }
+}
+
+.alert {
+  width: 507px;
+  height: 47px;
+  line-height: 47px;
+  padding-left: 50px;
+  background-color: $PrimaryColor;
+  @include box-sizing(border-box);
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 auto;
+  clear: both;
+  @include bg('alert-icon.png');
+  background-repeat: no-repeat;
+  background-position: 10px 8px;
+  margin-bottom: 20px;
+}
+
+#require {
+  h5 {
+    @extend .control-label;
+  }
+  .control-group.inline-row {
+    > label {
+      font-weight: normal;
+      width: 100px;
+      &:before {
+        content:none;
+        padding-right: 0;
+      }
+    }
+  }
+}
+.control-group .inline-row {
+  margin-left: 100px;
+}
+.inline-row > .controls {
+  display: inline;
+  margin-left: 0;
 }
