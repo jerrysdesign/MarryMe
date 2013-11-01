@@ -923,7 +923,7 @@ ul.menu-stacked {
 
 $calendarBg: #2e3641;
 
-.calendar {
+.calendar , .ui-widget-content {
   background: $PrimaryColor;
   color: #fff;
   max-width: 200px;
@@ -931,7 +931,7 @@ $calendarBg: #2e3641;
   margin: 0 auto;
   text-align: center;
   display: inline-block;
-  p {
+  p , .ui-widget-header {
     background: $calendarBg;
     line-height: 35px;
     border: 1px solid #343c47;
@@ -943,16 +943,18 @@ $calendarBg: #2e3641;
     display: table;
     clear: both;
   }
-  .prev , .next {
+  .prev , .next ,.ui-datepicker-prev , .ui-datepicker-next {
     width: 35px;
     line-height: 35px;
     cursor: pointer;
+    display: block;
+    color: #fff;
   }
-  .prev {
+  .prev , .ui-datepicker-prev {
     border-right: 1px solid #343c47;
-    float: left;
+    float: left;  
   }
-  .next {
+  .next , .ui-datepicker-next {
     border-left: 1px solid #343c47;
     float: right;
   }
@@ -1000,6 +1002,23 @@ $calendarBg: #2e3641;
 }
 .calendar+.calendar {
   margin-left: 10px;
+}
+.ui-datepicker .ui-datepicker-title {
+  // margin: 0 2.3em;
+  // line-height: 1.8em;
+  text-align: center;
+}
+.ui-datepicker-calendar {
+  th {
+    background: $calendarBg;
+    padding: 5px;
+  }
+  td {
+    padding: 5px;
+    a {
+      color: #fff;
+    }
+  }
 }
 .last-time {
   display: block;
@@ -2064,3 +2083,23 @@ img.random {
   display: inline;
   margin-left: 0;
 }
+
+.hasDatepicker , .dropdown {
+  border: none;
+  width: 100px;
+}
+
+// #ui-datepicker-div {
+//   margin: 0;
+//   padding: 0;
+//   background: #FFF;
+//   border: 0;
+//   border-radius: 3px 3px 0 0;
+//   box-shadow: #cccbc2 0px 1px 5px;
+//   .ui-datepicker-header {
+//     background: #D44D27;
+//     border-radius: 3px 3px 0 0;
+//     border: 0;
+//     color: #FFF;
+//   }
+// }

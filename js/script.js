@@ -7,7 +7,7 @@ $(function(){
     // var pos = $( '.share-to' ).position(),
     //     top = pos.top,
     //     right = pos.right;
-    
+
     $( this ).click(function ( e ) {
 
       $( tooltip ).css({
@@ -220,8 +220,48 @@ $(function(){
   });
 });
 
-// date
-$(function(){
+//Develop example
+$('#show-2-4-modal').on( 'click', function(e){
+  $('#require .modal').fadeIn();
+  $('.modal-background').fadeTo( 300 , 0.9 );
+  $('.wrapper').addClass('avgrund-active');
+  $('body').append($('#require'));
+  e.preventDefault();
+});
+  
+// jqueryUI datepicker
+$(function() {
+  // Disable a range of dates
+  var disabledDaysRange = [["8-9-2010 to 8-13-2013", "8-16-2013 to 8-19-2013", "8-22-2013 to 8-25-2013", '8-27-2013 to 8-27-2013']];
+  function disableRangeOfDays(d){
+    for(var i = 0; i < disabledDaysRange.length; i++){
+      if($.isArray(disabledDaysRange[i])){
+        for(var j = 0; j < disabledDaysRange[i].length; j++){
+          var r = disabledDaysRange[i][j].split(" to ");
+          r[0] = r[0].split("-");
+          r[1] = r[1].split("-");
+          if(new Date(r[0][2], (r[0][0]-1), r[0][1]) <= d && d <= new Date(r[1][2], (r[1][0]-1), r[1][1])){
+            return [false];
+          }
+        }
+      }
+      else {
+        if(((d.getMonth()+1) + '-' + d.getDate() + '-' + d.getFullYear()) == disabledDaysRange[i]){
+          return [false];
+        }
+      }
+    }
+    return [true];
+  }
+
+  $('#datepicker1,#datepicker2').datepicker({
+    dateFormat: 'mm-dd-yy',
+    beforeShowDay: disableRangeOfDays
+  });
+});
+
+// date(9.1)
+$(function() {
   var weekdays = new Array();
       weekdays[0] = "星期天";
       weekdays[1] = "星期一";
@@ -239,15 +279,4 @@ $(function(){
   $(".date-y-m").text(dest.getFullYear() + "." + dest.getMonth());
   $(".date-dd").text(dest.getDate());
   $(".date-wd").text(weekdays[dest.getDay()]);
-});
-
-//Develop example
-$( '#show-2-4-modal' ).on( 'click', function(){
-  $( '#m2-4' ).fadeIn();
-  $( '.modal-background' ).fadeTo( 300 , 0.9 );
-  $( '.wrapper').addClass('avgrund-active');
-  $('body').append($('#require'));
-  $('#require .modal').css({
-    'display':'block'
-  });
 });
