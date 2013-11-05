@@ -333,49 +333,61 @@ h6,
   font-size: 16px;
   font-weight: bold;
 }
-// .select {
-//   margin-top: 7px;
-//   @include border-radius (3px);
-//   @include bg('select-arrow.png');
-//   background-position: center right;
-//   background-repeat: no-repeat;
-//   @include box-shadow (0 1px rgba(255,255,255,.6), inset 0 2px rgba(0,0,0,.2));
-// }
-.search-box {
-  width: 285px;
-  @include box-shadow (0 2px 1px rgba(71,73,60,.25));
-  @include border-radius (6px);
-  margin-top: 7px;
-  @include clearfix;
-  overflow: hidden;
-  position: relative;
-  .input-text , .search-btn {
-    float: left;
-    @include reset-box-model;
-  }
-  .input-text {
-    width: 185px;
-    padding: 2px 10px 0 10px;
-    //@include border-radius (6px 0 0 6px);
-    @include box-shadow (inset 0 -2px rgba(0,0,0,.3));
-  }
-  .search-btn {
-    font-size: 14px;
-    line-height: 18px;
-    color: #fff;
-    border: none;
-    width: 80px;
-    height: 25px;
-    padding: 2px 30px 0 10px;
-    //@include border-radius (0 6px 6px 0);
-    background-color: #71c4a4;
-    @include bg ('search.png');
-    background-position: center right;
-    background-repeat: no-repeat;
-    border-bottom: 2px solid #4f8972;
-    cursor: pointer;
-  }
+.search-btn {
+  @include reset-box-model;
 }
+.search-btn {
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  border: none;
+  width: 80px;
+  height: 25px;
+  padding: 2px 30px 0 10px;
+  @include border-radius (6px);
+  background-color: #71c4a4;
+  @include bg ('search.png');
+  background-position: center right;
+  background-repeat: no-repeat;
+  border-bottom: 2px solid #4f8972;
+  cursor: pointer;
+  margin-top: 7px;
+}
+// .search-box {
+//   width: 285px;
+//   @include box-shadow (0 2px 1px rgba(71,73,60,.25));
+//   @include border-radius (6px);
+//   margin-top: 7px;
+//   @include clearfix;
+//   overflow: hidden;
+//   position: relative;
+//   .input-text , .search-btn {
+//     float: left;
+//     @include reset-box-model;
+//   }
+//   .input-text {
+//     width: 185px;
+//     padding: 2px 10px 0 10px;
+//     //@include border-radius (6px 0 0 6px);
+//     @include box-shadow (inset 0 -2px rgba(0,0,0,.3));
+//   }
+//   .search-btn {
+//     font-size: 14px;
+//     line-height: 18px;
+//     color: #fff;
+//     border: none;
+//     width: 80px;
+//     height: 25px;
+//     padding: 2px 30px 0 10px;
+//     //@include border-radius (0 6px 6px 0);
+//     background-color: #71c4a4;
+//     @include bg ('search.png');
+//     background-position: center right;
+//     background-repeat: no-repeat;
+//     border-bottom: 2px solid #4f8972;
+//     cursor: pointer;
+//   }
+// }
 
 /*FOOTER*/
 .footer {
