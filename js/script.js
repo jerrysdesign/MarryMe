@@ -228,6 +228,13 @@ $('#show-2-4-modal').on( 'click', function(e){
   $('body').append($('#require'));
   e.preventDefault();
 });
+$('.photo-list li a').on( 'click', function(e){
+  $('#p2-2-6-1 .modal').fadeIn();
+  $('.modal-background').fadeTo( 300 , 0.9 );
+  $('.wrapper').addClass('avgrund-active');
+  $('body').append($('#p2-2-6-1'));
+  e.preventDefault();
+});
   
 // jqueryUI datepicker
 $(function() {
